@@ -11,7 +11,7 @@
 		<meta name="msapplication-navbutton-color" content="#821414">
 		<!-- iOS Safari -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="#821414">
-		<title>Charles-Business-Consulting HTML Template</title>
+		<title>Africa Research Institute For AI (ARIFA)</title>
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="{{ asset('images/arifa-logo-edited.jpeg') }}">
 		<!-- Main style sheet -->

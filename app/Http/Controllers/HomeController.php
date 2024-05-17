@@ -28,7 +28,8 @@ class HomeController extends Controller
 
     public function about(){
         $institute = Institute::latest()->take(1)->first(['name','about']);
-        return view('frontend.about',compact('institute'));
+        $sponsors = Sponsor::all();
+        return view('frontend.about',compact('institute','sponsors'));
     }
 
     public function contactUs(){
