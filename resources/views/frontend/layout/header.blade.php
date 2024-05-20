@@ -66,6 +66,13 @@
 									        	<li><a href="service-details.html">Service Details</a></li>
 									       </ul> --}}
 									    </li>
+										<li class="{{ request()->routeIs('objectives')?'active':'' }}"><a href="#">Research</a>
+									    	{{-- <ul class="dropdown">
+									        	<li><a href="service.html">Service Version one</a></li>
+									        	<li><a href="service-v2.html">Service version two</a></li>
+									        	<li><a href="service-details.html">Service Details</a></li>
+									       </ul> --}}
+									    </li>
                                         <li class="{{ request()->routeIs(['gallery.*'])?'active':'' }}"><a href="{{ route('gallery.index') }}">Gallery</a></li>
 									    <li class="{{ request()->routeIs(['projects.*'])?'active':'' }}"><a href="{{ route('projects') }}">Projects</a>
 									    	{{-- <ul class="dropdown">

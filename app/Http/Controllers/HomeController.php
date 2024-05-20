@@ -64,7 +64,7 @@ class HomeController extends Controller
             'message' => $request->message,
         ];
 
-        Mail::to('isaactnicholaus@gmail.com')->send(new ContactMail($details));
+        Mail::to('info@arifa.org')->send(new ContactMail($details));
 
         return back()->with('message', 'Your message has been sent successfully!');
     }
