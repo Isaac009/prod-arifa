@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\TrainingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,11 @@ Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index
 Route::get('/gallery/{photo}', [GalleryController::class, 'show'])->name('gallery.show');
 Route::get('/team/{member}', [HomeController::class, 'team_member_details'])->name('team.show');
 Route::get('/objectives', [HomeController::class, 'objectives'])->name('objectives');
+
+Route::get('/training/program', [TrainingController::class, 'program'])->name('training.program');
+Route::get('/training/corporate-training', [TrainingController::class, 'corporate'])->name('training.corporate');
+Route::get('/training/government-training', [TrainingController::class, 'government'])->name('training.government');
+Route::get('/training/register-for-a-course', [TrainingController::class, 'registerCourse'])->name('training.register');
 
 Route::post('/remove-session-value', [SessionController::class,'removeValue'])->name('session.remove');
 

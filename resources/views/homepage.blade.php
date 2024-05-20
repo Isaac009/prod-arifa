@@ -150,7 +150,7 @@
 									</li>
 									<li>
 										<i class="icon flaticon-target"></i>
-										<h4>Goals</h4>
+										<h4>Values</h4>
 									</li>
 								</ul> <!-- /.mission-goal -->
 							</div> <!-- /.text -->
