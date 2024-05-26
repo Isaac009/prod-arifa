@@ -29,12 +29,16 @@
 								<div class="single-case-block">
 									<div>
 										<div class="text clearfix">
-											<h4>AI Skills Development Programs</h4>
-											<ul>
-												<li>Introductory AI Training</li>
-												<li>Advanced AI Workshops</li>
-												<li>Specialized AI Certifications</li>
-											</ul>
+											<h4>Request a Corporate or In-House Training</h4>
+											<p>
+                                                ARIFA provides in-house training courses that are customized or fully tailored to meet your organizational objectives to fulfill the gap.
+                                                By applying, you will obtain a learning solution that is delivered to your premises and at your desired time. As business technology increases in complexity, it is very important to invest time and money into employee training.
+                                                When employees are trained in new technologies, they can use them to provide better results for your business.
+                                            </p><br>
+                                            <p>
+                                                Employee training continues to produce one of the highest returns on investment a company can make.
+                                                Increased employee efficiency creates a ripple effect in your business, leading to greater satisfaction for all, including your customers.
+                                            </p>
 										</div> <!-- /.text -->
 									</div> <!-- /.hover-content -->
 								</div> <!-- /.single-case-block -->
@@ -43,12 +47,14 @@
 								<div class="single-case-block">
 									<div>
 										<div class="text clearfix">
-											<h4>Ethics in AI Training</h4>
-											<ul>
-												<li>Ethical AI Principles</li>
-												<li>Responsible AI Practices</li>
-												<li>Bias Mitigation Strategies</li>
-											</ul>
+											<h4>Advantages of Training for Your Employees</h4>
+                                            Training your employees with ARIFA can increase:
+												<li>Process efficiency, flexibility, & productivity</li>
+												<li>Problem-solving skills</li>
+                                                <li>Innovation in strategies and products</li>
+                                                <li>Job satisfaction & morale</li>
+                                                <li>Employee motivation & retention</li>
+                                                <li>Customer satisfaction</li>
 										</div> <!-- /.text -->
 									</div> <!-- /.hover-content -->
 								</div> <!-- /.single-case-block -->
@@ -58,11 +64,9 @@
 									<div>
 										<div class="text clearfix">
 											<h4>Professional Development for AI Practitioners</h4>
-											<ul>
 												<li>Continuing Education for AI Professionals</li>
 												<li>Industry-Specific AI Training</li>
 												<li>Certification in AI Ethics and Governance</li>
-											</ul>
 										</div> <!-- /.text -->
 									</div> <!-- /.hover-content -->
 								</div> <!-- /.single-case-block -->
@@ -72,11 +76,9 @@
 									<div>
 										<div class="text clearfix">
 											<h4>Capacity Building in AI for Organizations/Companies/Institutions</h4>
-											<ul>
 												<li>Training Programs</li>
 												<li>AI Skill Building for Social Impact</li>
 												<li>Grant-Writing Workshops for AI Initiatives</li>
-											</ul>
 										</div> <!-- /.text -->
 									</div> <!-- /.hover-content -->
 								</div> <!-- /.single-case-block -->

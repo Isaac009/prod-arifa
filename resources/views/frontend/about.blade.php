@@ -21,13 +21,35 @@
 				CallOut Banner
 			==============================================
 			-->
-			<div class="callout-banner no-bg">
+			{{-- <div class="callout-banner no-bg">
 				<div class="container clearfix">
-					<h3 class="title">KNOW <br> {{ $institute->name }}</h3>
-					<p>{!! $institute->about !!}</p>
-					<a href="{{ route('contact-us') }}" class="theme-button-one">CONTACT US</a>
-				</div>
-			</div> <!-- /.callout-banner -->
+                    <div class="row">
+                        <div class="col-3">
+                            <h3 class="title">KNOW <br> {{ $institute->name }}</h3>
+                        </div>
+                        <div class="col-9"> --}}
+                            {{-- <p>{!! $institute->about !!}</p> --}}
+                        {{-- <p>Africa Research Institute For AI (ARIFA), is a not-for-profit think tank united by a shared
+                        commitment to advancing impactful research, training and advisory.
+                        ARIFA is specifically focused on Sub-Saharan Africa (SSA) and seeks to foster innovation,
+                        facilitate knowledge exchange, and drive evidence-based policymaking to effectively tackle
+                        the dynamic challenges posed by the rapid advancements in technology.</p><br/><br/>
+
+                        <p>Rooted in its commitment to interdisciplinary research and collaboration, ARIFA has emerged
+                        as a pivotal force within the research and development (R&D) sector. As a key player in the
+                        renaissance of AI, ARIFA actively contributes to shaping the future integration of AI and other
+                        emerging technologies into the fabric of modern society.</p><br/><br/>
+
+                        <p>Since its inception, ARIFA has been dedicated to fostering a renaissance in AI, leveraging
+                        computational power and abundant data to push the boundaries of real-world applications.
+                        As ARIFA continues its journey, its historic background stands as a testament to its founding
+                        principles, serving as a foundation for growth, impact, and a relentless pursuit of excellence
+                        in the ever-evolving fields of AI and other Emerging Technologies.</p>
+                        </div>
+                    </div> --}}
+					{{-- <a href="{{ route('contact-us') }}" class="theme-button-one">CONTACT US</a> --}}
+				{{-- </div>
+			</div> <!-- /.callout-banner --> --}}
 
 
 
@@ -40,29 +62,84 @@
 				<div class="overlay">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-6 col-12 text order-lg-last">
-								<div class="theme-title-one">
-									<h2>SHORT HISTORY</h2>
-								</div> <!-- /.theme-title-one -->
-								<p>A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the government they survive as soldiers of fortune to a deluxe you apartment in the sky to explore strange new worlds to seek out new life and new civilizations to boldly go where no man has gone.</p>
-								<p>You would see the biggest gift would be from me and the card attached would so thank you for being a friend the biggest gift.</p>
-								<img src="{{ asset('front-resources/images/home/sign-black.png') }}" alt="" class="sign">
-							</div> <!-- /.col- -->
-							<div class="col-lg-6 col-12 order-lg-first">
-								<img src="{{ asset('front-resources/images/home/15.jpg') }}" alt="" class="left-img">
-							</div>
-						</div> <!-- /.row -->
+                            <div class="col-3">
+                                <h3 class="title">KNOW {{ $institute->name }}</h3>
+                            </div>
+                            <div class="col-9">
+                                {{-- <p>{!! $institute->about !!}</p> --}}
+                            <p>Africa Research Institute For AI (ARIFA), is a not-for-profit think tank united by a shared
+                            commitment to advancing impactful research, training and advisory.
+                            ARIFA is specifically focused on Sub-Saharan Africa (SSA) and seeks to foster innovation,
+                            facilitate knowledge exchange, and drive evidence-based policymaking to effectively tackle
+                            the dynamic challenges posed by the rapid advancements in technology.</p><br/><br/>
+
+                            <p>Rooted in its commitment to interdisciplinary research and collaboration, ARIFA has emerged
+                            as a pivotal force within the research and development (R&D) sector. As a key player in the
+                            renaissance of AI, ARIFA actively contributes to shaping the future integration of AI and other
+                            emerging technologies into the fabric of modern society.</p><br/><br/>
+
+                            <p>Since its inception, ARIFA has been dedicated to fostering a renaissance in AI, leveraging
+                            computational power and abundant data to push the boundaries of real-world applications.
+                            As ARIFA continues its journey, its historic background stands as a testament to its founding
+                            principles, serving as a foundation for growth, impact, and a relentless pursuit of excellence
+                            in the ever-evolving fields of AI and other Emerging Technologies.</p>
+                            </div>
+                        </div>
 					</div> <!-- /.container -->
 				</div> <!-- /.overlay -->
 			</div> <!-- /.about-compnay-two -->
 
+            <hr>
+
+            <div class="about-compnay-two no-bg section-spacing">
+				<div class="overlay">
+					<div class="container">
+						<div class="row">
+                            <div class="col-3">
+                                <h3 class="title">Diversity, Equity, and Belonging</h3>
+                            </div>
+                            <div class="col-9">
+                                {{-- <p>{!! $institute->about !!}</p> --}}
+                            <p>ARIFA is committed to fostering an inclusive work environment for everyone.
+                                We embrace and celebrate the unique experiences, perspectives and cultural
+                                backgrounds each employee brings to our workplace. ARIFA aims to create an
+                                environment where our employees feel respected,
+                                valued and empowered, and to create an inclusive workplace through which our team members
+                                are an integral part.
+                            </p>
+                            </div>
+                        </div>
+					</div> <!-- /.container -->
+				</div> <!-- /.overlay -->
+			</div> <!-- /.about-compnay-two -->
+
+            <hr>
+
+            <div class="about-compnay-two no-bg section-spacing">
+				<div class="overlay">
+					<div class="container">
+						<div class="row">
+                            <div class="col-3">
+                                <h3 class="title">Ventures/Research Partners</h3>
+                            </div>
+                            <div class="col-9">
+                            <p>
+                                ARIFA now’s work is done through collaborations across an expansive, world-class network
+                                that includes scholars, technologists, policy-makers, advocates, and many others.
+                                We have established formal partnerships with the following organizations:
+                            </p>
+                            </div>
+                        </div>
+					</div> <!-- /.container -->
+				</div> <!-- /.overlay -->
+			</div> <!-- /.about-compnay-two -->
 
 			<!--
 			=====================================================
 				Why We Best
 			=====================================================
 			-->
-			<div class="why-we-best">
+			{{-- <div class="why-we-best">
 				<div class="overlay">
 					<div class="container">
 						<div class="theme-title-one">
@@ -94,7 +171,7 @@
 						</div> <!-- /.wrapper -->
 					</div> <!-- /.container -->
 				</div> <!-- /.overlay -->
-			</div> <!-- /.why-we-best -->
+			</div> <!-- /.why-we-best --> --}}
 
 
 			<!--
@@ -102,7 +179,7 @@
 				Theme Counter
 			=====================================================
 			-->
-			<div class="theme-counter-two section-spacing">
+			{{-- <div class="theme-counter-two section-spacing">
 				<div class="container">
 					<div class="clearfix">
 						<div class="cunter-wrapper">
@@ -138,7 +215,7 @@
 						</div> <!-- /.cunter-wrapper -->
 					</div> <!-- /.clearfix -->
 				</div> <!-- /.container -->
-			</div> <!-- /.theme-counter -->
+			</div> <!-- /.theme-counter --> --}}
 
 
 			<!--
@@ -146,7 +223,7 @@
 				Core Values
 			==============================================
 			-->
-			<div class="core-values">
+			{{-- <div class="core-values">
 				<div class="container">
 					<div class="theme-title-one">
 						<h2>CORE VALUES</h2>
@@ -192,7 +269,7 @@
 						</div> <!-- /.core-value-slider -->
 					</div> <!-- /.wrapper -->
 				</div> <!-- /.container -->
-			</div> <!-- /.core-values -->
+			</div> <!-- /.core-values --> --}}
 
 
 
@@ -201,7 +278,7 @@
 				Partner Slider
 			=====================================================
 			-->
-			<div class="partner-section">
+			{{-- <div class="partner-section">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-3 col-sm-4 col-12">
@@ -218,6 +295,6 @@
 						</div>
 					</div>
 				</div>
-			</div> <!-- /.partner-section -->
+			</div> <!-- /.partner-section --> --}}
 
 @endsection

@@ -45,7 +45,7 @@
 									    </li> --}}
 									    <li class="{{ request()->routeIs(['about','team'])?'active':'' }}"><a href="#">About</a>
 									    	<ul class="dropdown">
-									    		<li><a href="{{ route('about') }}">About us</a></li>
+									    		<li><a href="{{ route('about') }}">About ARIFA</a></li>
 									    		<li><a href="{{ route('team') }}">Our team</a></li>
 									       </ul>
 									    </li>
