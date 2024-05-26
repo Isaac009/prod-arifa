@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\IndustryController;
 use App\Http\Controllers\TrainingController;
 
 /*
@@ -27,6 +28,9 @@ Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index
 Route::get('/gallery/{photo}', [GalleryController::class, 'show'])->name('gallery.show');
 Route::get('/team/{member}', [HomeController::class, 'team_member_details'])->name('team.show');
 Route::get('/objectives', [HomeController::class, 'objectives'])->name('objectives');
+
+Route::get('/industry/industry-partners-program', [IndustryController::class, 'program'])->name('industry.program');
+Route::get('/industry/levels-of-engagement-and-support', [IndustryController::class, 'engagement'])->name('industry.engagement');
 
 Route::get('/training/program', [TrainingController::class, 'program'])->name('training.program');
 Route::get('/training/corporate-training', [TrainingController::class, 'corporate'])->name('training.corporate');

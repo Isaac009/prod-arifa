@@ -55,12 +55,12 @@
 									        	<li><a href="service-v2.html">Research & Development</a></li>
 									       </ul>
 									    </li>
-										<li class="{{ request()->routeIs('objectives')?'active':'' }}"><a href="#">Industry</a>
-									    	{{-- <ul class="dropdown">
-									        	<li><a href="service.html">Service Version one</a></li>
-									        	<li><a href="service-v2.html">Service version two</a></li>
-									        	<li><a href="service-details.html">Service Details</a></li>
-									       </ul> --}}
+										<li class="{{ request()->routeIs('industry.*')?'active':'' }}"><a href="#">Industry</a>
+									    	<ul class="dropdown">
+									        	<li><a href="{{ route('industry.program') }}">Industry Partners Program</a></li>
+									        	<li><a href="{{ route('industry.engagement') }}">Levels of Engagement and Support</a></li>
+									        	{{-- <li><a href="service-details.html">Service Details</a></li> --}}
+									       </ul>
 									    </li>
 										<li class="{{ request()->routeIs(['training.*'])?'active':'' }}"><a href="#">Training</a>
 									    	<ul class="dropdown">

@@ -23,24 +23,33 @@
 			<div class="our-case our-project section-spacing">
 				<div class="container">
 					<div class="wrapper">
+<<<<<<< HEAD
 						{{-- <div class="row"> --}}
 							{{-- @foreach ($projects as $project) --}}
+=======
+						<div class="row">
+>>>>>>> a616adcd6130b657824b26ec4461d1a38971a949
                             <div class="col-lg-12 col-sm-12 col-12">
 								<div class="single-case-block">
 									<div>
 										<div class="text clearfix">
 											<h4>Custom Government Training Solutions</h4>
 											<p>
-                                                Government agencies continue to face the challenge of doing more with
-                                                tighter budgets, even as new legislative requirements and directives
-                                                seek to improve financial, project, and security management.
-                                                Now more than ever, it is critical to keep employee skills in line with
-                                                today’s advancing technology to ensure your department’s goals are met.
-                                            </p><br>
-                                            <p>
-                                                ARIFA courses and training will help improve employee productivity and efficiency while saving money.
-                                                Our representatives will work with you to create a customized learning solution that aligns with your agency’s goals
-                                            </p>
+												Government agencies continue to face the challenge of doing more with tighter budgets, even as new legislative requirements and directives seek to improve financial, project, and security management. Now more than ever, it is critical to keep employee skills in line with today’s advancing technology to ensure your department’s goals are met.
+												ARIFA courses and training will help improve employee productivity and efficiency while saving money. Our representatives will work with you to create a customized learning solution that aligns with your agency’s goals.
+											</p>
+											<br><br>
+											<h4>Convenient Learning Solutions</h4>
+											With rising transportation and infrastructure costs, many government leaders recognize the benefits of online training and learning. Online training options from ARIFA reduces costs and increases learning flexibility.
+											We also offer on-site, private, and traditional instructor-led classroom training. These courses can also be completed in a group environment that fuels team collaboration and growth.
+											<br><br>
+											<h4>Measurable Results</h4>
+											In an era of fiscal belt-tightening, it is important to have measurable results from training investments.
+											With government training at ARIFA, you will be able to identify the learning that occurred, the areas that still need to be improved, and the value of the skills obtained with the help of:
+												<li> Evaluations</li>
+												<li>Certification Exams</li>
+												<li>Post-Class Assessments</li>
+												<li>Surveys</li>
 										</div> <!-- /.text -->
 									</div> <!-- /.hover-content -->
 								</div> <!-- /.single-case-block -->
