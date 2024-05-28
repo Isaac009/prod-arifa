@@ -137,11 +137,13 @@
 								<div class="theme-title-one">
 									<h2>About Our {{ $institute->name }}</h2>
 									<p>{{ $institute->about }}</p>
-									{{-- <p>The government they survive as soldiers of fortune baby if you've ever wondered the east side to a deluxe apartment.</p> --}}
 								</div> <!-- /.theme-title-one -->
 								<ul class="mission-goal clearfix">
 									<li>
-										<i class="icon flaticon-star"></i>
+										<a href="#" onclick="event.preventDefault()" data-bs-toggle="popover" 
+											data-bs-placement="top" data-bs-content="And here's some amazing content. It's very engaging. Right?">
+											<i class="icon flaticon-star"></i>
+										</a>
 										<h4>Vision</h4>
 									</li>
 									<li>
@@ -168,8 +170,10 @@
 			<div class="feature-banner section-spacing">
 				<div class="opacity">
 					<div class="container">
-						<h2>We provide high quality services &amp; innovative solutions for the realiable growth</h2>
-						<a href="#" class="theme-button-one">GET A QUOTES</a>
+						<h2>Join  us as we help build "a feature where Artificial Intelligence empowers
+							humanity by contributing to a more just, equitable, and prosperous world."
+						</h2>
+						<a href="#" class="theme-button-one">JOIN US</a>
 					</div> <!-- /.container -->
 				</div> <!-- /.opacity -->
 			</div> <!-- /.feature-banner -->
@@ -195,7 +199,7 @@
                                         <div class="img-box"><img src="{{ asset('storage/'.$project->project_image) }}" alt=""></div>
                                         <div class="text">
                                             <h5><a href="{{ route('projects.show',$project->id) }}">{{ substr($project->title, 0, 16) }}</a></h5>
-                                            <p>{!! substr($project->description, 0, 30) !!}...</p>
+                                            <p>{!! substr($project->description, 0, 20) !!}...</p>
                                             <a href="{{ route('projects.show',$project->id) }}" class="read-more">READ MORE <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         </div> <!-- /.text -->
                                     </div> <!-- /.single-service -->
@@ -428,3 +432,15 @@
 			</div> <!-- /.partner-section -->
 
 @endsection
+
+@push('additional-scripts')
+	<!-- Initialize Popover -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl)
+            })
+        });
+    </script>
+@endpush
