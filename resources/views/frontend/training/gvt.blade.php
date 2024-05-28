@@ -23,12 +23,7 @@
 			<div class="our-case our-project section-spacing">
 				<div class="container">
 					<div class="wrapper">
-<<<<<<< HEAD
-						{{-- <div class="row"> --}}
-							{{-- @foreach ($projects as $project) --}}
-=======
 						<div class="row">
->>>>>>> a616adcd6130b657824b26ec4461d1a38971a949
                             <div class="col-lg-12 col-sm-12 col-12">
 								<div class="single-case-block">
 									<div>

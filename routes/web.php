@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GalleryController;
@@ -31,6 +32,8 @@ Route::get('/objectives', [HomeController::class, 'objectives'])->name('objectiv
 
 Route::get('/industry/industry-partners-program', [IndustryController::class, 'program'])->name('industry.program');
 Route::get('/industry/levels-of-engagement-and-support', [IndustryController::class, 'engagement'])->name('industry.engagement');
+
+Route::get('/events', [EventController::class, 'index'])->name('events.index');
 
 Route::get('/training/program', [TrainingController::class, 'program'])->name('training.program');
 Route::get('/training/corporate-training', [TrainingController::class, 'corporate'])->name('training.corporate');

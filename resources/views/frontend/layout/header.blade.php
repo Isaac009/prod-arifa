@@ -71,7 +71,7 @@
 									        </ul>
 									    </li>
 										<li class="{{ request()->routeIs(['projects.*'])?'active':'' }}"><a href="#">Publications</a></li>
-										<li class="{{ request()->routeIs(['projects.*'])?'active':'' }}"><a href="#">Events</a></li>
+										<li class="{{ request()->routeIs(['events.*'])?'active':'' }}"><a href="{{ route('events.index') }}">Events</a></li>
 										<li class="{{ request()->routeIs(['projects.*'])?'active':'' }}"><a href="#">Opportunities</a>
 									    	<ul class="dropdown">
 									        	<li><a href="#">Careers</a></li>
