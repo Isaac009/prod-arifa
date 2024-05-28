@@ -23,7 +23,22 @@
 			<div class="our-case our-project section-spacing">
 				<div class="container">
 					<div class="wrapper">
-						<div class="row">
+                        <div class="row">
+                            @foreach($projects as $project)
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <img class="card-img-top" src="{{ asset('storage/'.$project->project_image) }}" alt="{{ $event->title }}">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Title</h5>
+                                            <p class="card-text">description</p>
+                                            <p class="card-text"><small class="text-muted">From {{ $project->start_date ?? '2024-01-01' }} to {{ $project->end_date ?? '2024-01-01' }}</small></p>
+                                            <a href="#" class="btn btn-primary">Event Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+						{{-- <div class="row">
 							@foreach ($projects as $project)
                             <div class="col-lg-4 col-sm-6 col-12">
 								<div class="single-case-block">
@@ -32,7 +47,6 @@
 										<div class="text clearfix">
 											<div class="float-left">
 												<h5><a href="{{ route('projects.show',$project->id) }}">{{ $project->title }}</a></h5>
-												{{-- <p>Explore strange new worlds</p> --}}
 											</div>
 											<a href="{{ route('projects.show',$project->id) }}" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 										</div> <!-- /.text -->
@@ -40,119 +54,7 @@
 								</div> <!-- /.single-case-block -->
 							</div> <!-- /.col- -->
                             @endforeach
-							{{-- <div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/2.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/3.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/4.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/5.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/6.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/13.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/14.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/15.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- --> --}}
-						</div> <!-- /.row -->
+						</div> <!-- /.row --> --}}
 					</div> <!-- /.wrapper -->
 					<div class="theme-pagination text-center">
 						<ul>
