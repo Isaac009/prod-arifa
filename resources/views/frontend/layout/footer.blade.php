@@ -37,12 +37,12 @@
 							<div class="col-xl-2 col-lg-3 col-sm-6 footer-list">
 								<h6 class="title">USEFUL LINKS</h6>
 								<ul>
-									<li><a href="#">Travel and Aviation</a></li>
-									<li><a href="#">Business Services</a></li>
-									<li><a href="#">Consumer Products</a></li>
-									<li><a href="#">Financial Services</a></li>
-									<li><a href="#">Software Research</a></li>
-									<li><a href="#">Quality Resourcing</a></li>
+									<li><a href="{{ route('about') }}">About</a></li>
+									<li><a href="{{ route('projects') }}">Research Projects</a></li>
+									<li><a href="{{ route('events.index') }}">Events</a></li>
+									<li><a href="{{ route('opportunities.call-for-papers') }}">Call for Paper</a></li>
+									<li><a href="{{ route('publications.index') }}">Publications</a></li>
+									<li><a href="{{ route('opportunities.index') }}">Opportunities</a></li>
 								</ul>
 							</div> <!-- /.footer-list -->
 							<div class="col-xl-3 col-lg-2 col-sm-6 footer-newsletter">

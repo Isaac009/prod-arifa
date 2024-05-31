@@ -1,5 +1,36 @@
 @extends('frontend.layout.app')
-
+<style>
+    .event-card {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .event-card img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .event-details {
+        flex: 1;
+        padding: 20px;
+    }
+    .event-date {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .event-date span {
+        display: block;
+        text-align: center;
+    }
+    .filter-form {
+        margin-bottom: 20px;
+    }
+    .past-events-title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+</style>
 @section('main-content')
 <!--
 			=============================================
@@ -22,40 +53,73 @@
 			-->
 			<div class="our-case our-project section-spacing">
 				<div class="container">
-					<div class="wrapper">
-						<div class="row">
-							@foreach ($events as $event)
-                            {{-- <div class="callout-banner no-bg"> --}}
-								<div class="container clearfix">
-									<div class="row">
-										<div class="col-lg-4">
-											<h6>{{ $event->from }} ~ {{ $event->to }}</h6>
-										</div>
-										<hr>
-										<div class="col-lg-8">
-											<p>{!! $event->description !!}</p>
-											<br/>
-										</div>
-										<hr>
-									</div>
-									{{-- <a href="{{ route('contact-us') }}" class="theme-button-one">CONTACT US</a> --}}
-								</div>
-								<hr>
-							{{-- </div> <!-- /.callout-banner --> --}}
-                            @endforeach
-							<div class="col-sm-6 col-md-3 col-lg-4"></div>
-							<div class="text-center">
-								{{ $events->appends(request()->except('page'))->links('pagination::bootstrap-5') }}
-								{{-- <ul>
-									<li><a href="#">1</a></li>
-									<li class="active"><a href="#">2</a></li>
-									<li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-								</ul> --}}
-							</div>
-						</div> <!-- /.row -->
-					</div> <!-- /.wrapper -->
+                    <div class="filter-form">
+                        <form method="GET" action="{{ route('events.index') }}">
+                            <div class="row mb-4">
+                                <div class="col-md-3">
+                                    <select class="form-select" name="filter">
+                                        <option value="">Filter by</option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="date" name="from" class="form-control" placeholder="Start Date" value="{{ request('from') }}">
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="date" name="to" class="form-control" placeholder="End Date" value="{{ request('to') }}">
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="submit" class="btn btn-primary">Filter</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
 
-				</div> <!-- /.container -->
+                    <div class="row">
+                        @foreach($events as $event)
+                            <div class="col-md-12">
+                                <div class="event-card">
+                                    <div class="event-date" style="padding: 10px">
+                                        <span style="font-size: 13px">{{ \Carbon\Carbon::parse($event->from)->format('M') }}</span>
+                                        <span>{{ \Carbon\Carbon::parse($event->from)->format('d') }}</span>
+                                        <span>through</span>
+                                        <span style="font-size: 13px">{{ \Carbon\Carbon::parse($event->to)->format('M d') }}</span>
+                                    </div>
+                                    <img src="{{ asset($event->image != null ? 'storage/'.$event->image : 'images/event_default.png') }}" alt="{{ $event->topic }}">
+                                    <div class="event-details">
+                                        <h5>{{ $event->topic }}</h5>
+                                        <p>{!! $event->description !!}</p>
+                                        <a href="#" class="btn btn-link">Event Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <hr>
+
+                    <div class="past-events-title">Past Events</div>
+
+                    <!-- Assuming you have a variable $pastEvents for past events -->
+                    <div class="row">
+                        @foreach($events as $event)
+                            <div class="col-md-12">
+                                <div class="event-card">
+                                    <div class="event-date" style="padding: 10px">
+                                        <span style="font-size: 13px">{{ \Carbon\Carbon::parse($event->from)->format('M') }}</span>
+                                        <span>{{ \Carbon\Carbon::parse($event->from)->format('d') }}</span>
+                                    </div>
+                                    <img src="{{ asset($event->image != null ? 'storage/'.$event->image : 'images/event_default.png') }}" alt="{{ $event->topic }}">
+                                    <div class="event-details">
+                                        <h5>{{ $event->topic }}</h5>
+                                        <p>{!! $event->description !!}</p>
+                                        <a href="#" class="btn btn-link">Event Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div> <!-- /.container -->
 			</div> <!-- /.our-case -->
 
 @endsection

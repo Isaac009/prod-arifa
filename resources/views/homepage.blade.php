@@ -140,7 +140,7 @@
 								</div> <!-- /.theme-title-one -->
 								<ul class="mission-goal clearfix">
 									<li>
-										<a href="#" onclick="event.preventDefault()" data-bs-toggle="popover" 
+										<a href="#" onclick="event.preventDefault()" data-bs-toggle="popover"
 											data-bs-placement="top" data-bs-content="And here's some amazing content. It's very engaging. Right?">
 											<i class="icon flaticon-star"></i>
 										</a>

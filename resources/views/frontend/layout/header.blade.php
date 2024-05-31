@@ -70,13 +70,13 @@
 												<li><a href="{{ route('training.register') }}">Register for a Course</a></li>
 									        </ul>
 									    </li>
-										<li class="{{ request()->routeIs(['projects.*'])?'active':'' }}"><a href="#">Publications</a></li>
+										<li class="{{ request()->routeIs(['publications.*'])?'active':'' }}"><a href="{{ route('publications.index') }}">Publications</a></li>
 										<li class="{{ request()->routeIs(['events.*'])?'active':'' }}"><a href="{{ route('events.index') }}">Events</a></li>
-										<li class="{{ request()->routeIs(['projects.*'])?'active':'' }}"><a href="#">Opportunities</a>
+										<li class="{{ request()->routeIs(['opportunities.*'])?'active':'' }}"><a href="#">Opportunities</a>
 									    	<ul class="dropdown">
-									        	<li><a href="#">Careers</a></li>
-									        	<li><a href="#">Call for Proposals</a></li>
-												<li><a href="#">Become an Instructor</a></li>
+									        	<li><a href="{{ route('opportunities.careers') }}">Careers</a></li>
+									        	<li><a href="{{ route('opportunities.call-for-papers') }}">Call for Proposals</a></li>
+												<li><a href="{{ route('opportunities.become-instructor') }}">Become an Instructor</a></li>
 									        </ul>
 									    </li>
                                         {{-- <li class="{{ request()->routeIs(['gallery.*'])?'active':'' }}"><a href="{{ route('gallery.index') }}">Gallery</a></li> --}}

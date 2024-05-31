@@ -1,13 +1,16 @@
 <?php
 
-use App\Http\Controllers\EventController;
+use App\Models\Publication;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\IndustryController;
 use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\OpportunityController;
+use App\Http\Controllers\PublicationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +37,14 @@ Route::get('/industry/industry-partners-program', [IndustryController::class, 'p
 Route::get('/industry/levels-of-engagement-and-support', [IndustryController::class, 'engagement'])->name('industry.engagement');
 
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
+Route::get('/publications', [PublicationController::class, 'index'])->name('publications.index');
+Route::get('/publications/details', [PublicationController::class, 'show'])->name('publications.show');
+
+Route::get('/opportunities', [OpportunityController::class, 'index'])->name('opportunities.index');
+Route::get('/opportunities/details', [OpportunityController::class, 'show'])->name('opportunities.show');
+Route::get('/opportunities/Call-for-proposal', [OpportunityController::class, 'callforpaper'])->name('opportunities.call-for-papers');
+Route::get('/opportunities/become-instructor', [OpportunityController::class, 'becomeinstructor'])->name('opportunities.become-instructor');
+Route::get('/opportunities/careers', [OpportunityController::class, 'careers'])->name('opportunities.careers');
 
 Route::get('/training/program', [TrainingController::class, 'program'])->name('training.program');
 Route::get('/training/corporate-training', [TrainingController::class, 'corporate'])->name('training.corporate');
