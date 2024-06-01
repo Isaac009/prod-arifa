@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('member_group_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('profile_photo_url')->default('images/user_avatar.png');
             $table->string('titles');
             $table->string('name');

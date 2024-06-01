@@ -14,102 +14,170 @@
         </div> <!-- /.overlay -->
     </div> <!-- /.theme-inner-banner -->
 
-
     <!--
     =============================================
-        Project Details
+        Service Details
     ==============================================
     -->
-    <div class="project-details section-spacing">
+    <div class="service-details section-spacing">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4 col-lg-9 col-md-10 col-12 project-details-sidebar order-md-last">
-                    <div class="strategies">
-                        <h5>{{ $project->title }}</h5>
-                        <hr>
+                <div class="col-xl-9 col-lg-8 col-12">
+                    <div class="service-content">
+                        <img src="{{ asset('images/project_placeholder.png') }}" alt="" class="cover-img">
+                        <h3 class="main-title">{{ $project->title }}</h3>
                         <p>{!! $project->description !!}</p>
-                        <hr>
-                        {{-- <p>Boldly go where no man has gone before you would see the biggest gift would be from me and the card attached would say thank you.</p> --}}
-                        <ul class="project-history clearfix">
-                            <li>
-                                <h6>Sponsor :</h6>
-                                <span>{{ $project->sponsor->name }}</span>
-                            </li>
-                            <li>
-                                <h6>Date :</h6>
-                                <span>From: {{ $project->from_date }} ~ To: {{ $project->to_date }}</span>
-                            </li>
-                            {{-- <li>
-                                <h6>Budget :</h6>
-                                <span>$3,450</span>
-                            </li>
-                            <li>
-                                <h6>Category :</h6>
-                                <span>Business Consulting</span>
-                            </li> --}}
-                        </ul>
-                        <h6>Share us on :</h6>
-                        <ul class="social-icon">
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
+                        <div class="presentation-section">
+                            <h4 class="sub-heading">Company Presentation:</h4>
+                            <p>That this group would somehow form a family that's the way we all became the Brady Bunch apartment in the sky moving on up to the east side a family to explore strange new worlds.</p>
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <ul class="best-list-item">
+                                        <li>
+                                            <i class="icon flaticon-interface"></i>
+                                            <h5>Technology</h5>
+                                            <p>The Love Boat soon will be making another run plore strange.</p>
+                                        </li>
+                                        <li>
+                                            <i class="icon flaticon-technology"></i>
+                                            <h5>Innovation</h5>
+                                            <p>The Love Boat soon will be making another run plore strange.</p>
+                                        </li>
+                                        <li>
+                                            <i class="icon flaticon-chart"></i>
+                                            <h5>Integration</h5>
+                                            <p>The Love Boat soon will be making another run plore strange.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 col-12"><img src="images/home/pattern3.png" alt="" class="chart"></div>
+                            </div>
+                        </div> <!-- /.presentation-section -->
 
-                    <div class="charts">
-                        <h3 class="main-title">Improvement Charts</h3>
-                        <p>The man has gone before you would see the biggest gift would be from me and the card attached.</p>
-                        <div id="chartContainer"></div>
-                    </div> <!-- /.charts -->
-                </div> <!-- /.project-details-sidebar -->
-                <div class="col-xl-8 col-lg-3 col-md-2 col-12 order-md-first image-col">
-                    <img src="{{ asset('storage/'.$project->project_image) }}" alt="">
-                    <img src="{{ asset('storage/'.$project->project_image) }}" alt="">
-                    <img src="{{ asset('storage/'.$project->project_image) }}" alt="">
-                </div>
+                        <div class="topics">
+                            <h4 class="sub-heading">Usefull Topics:</h4>
+                            <div class="accordion-one">
+                                <div class="panel-group theme-accordion" id="accordion">
+                                    <div class="panel">
+                                    <div class="panel-heading">
+                                        <h6 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                        1. What industries do you specialize in?</a>
+                                        </h6>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                        <p>A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the govern ment they survive as soldiers of fortune to a deluxe you apartment that this group would somehow form a apartment in the sky moving on up to the east side a family to explore strange new worlds.</p>
+                                        </div>
+                                    </div>
+                                    </div> <!-- /panel 1 -->
+                                    <div class="panel">
+                                    <div class="panel-heading active-panel">
+                                        <h6 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                        2. You guarantee that our plan will raise capital?</a>
+                                        </h6>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse show">
+                                        <div class="panel-body">
+                                        <p>A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the govern ment they survive as soldiers of fortune to a deluxe you apartment that this group would somehow form a apartment in the sky moving on up to the east side a family to explore strange new worlds.</p>
+                                        </div>
+                                    </div>
+                                    </div> <!-- /panel 2 -->
+                                    <div class="panel">
+                                    <div class="panel-heading">
+                                        <h6 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                        3. Do you ever invest in your clients?</a>
+                                        </h6>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                        <p>A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the govern ment they survive as soldiers of fortune to a deluxe you apartment that this group would somehow form a apartment in the sky moving on up to the east side a family to explore strange new worlds.</p>
+                                        </div>
+                                    </div>
+                                    </div> <!-- /panel 3 -->
+                                    <div class="panel">
+                                    <div class="panel-heading">
+                                        <h6 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                        4. What makes your financial projections special?</a>
+                                        </h6>
+                                    </div>
+                                    <div id="collapse4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                        <p>A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the govern ment they survive as soldiers of fortune to a deluxe you apartment that this group would somehow form a apartment in the sky moving on up to the east side a family to explore strange new worlds.</p>
+                                        </div>
+                                    </div>
+                                    </div> <!-- /panel 4 -->
+                                    <div class="panel">
+                                    <div class="panel-heading">
+                                        <h6 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                                        5. Will you agree with everything I say?</a>
+                                        </h6>
+                                    </div>
+                                    <div id="collapse5" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                        <p>A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the govern ment they survive as soldiers of fortune to a deluxe you apartment that this group would somehow form a apartment in the sky moving on up to the east side a family to explore strange new worlds.</p>
+                                        </div>
+                                    </div>
+                                    </div> <!-- /panel 5 -->
+                                </div> <!-- end #accordion -->
+                            </div> <!-- End of .accordion-one -->
+                        </div> <!-- /.topics -->
+
+                        <div class="market-growth">
+                            <h4 class="sub-heading">Reliable Market Growth:</h4>
+                            <div class="wrapper">
+                                <div class="row">
+                                    <div class="col-xl-6 col-md-5 col-12"><img src="images/home/21.jpg" alt=""></div>
+                                    <div class="col-xl-6 col-md-7 col-12">
+                                        <p>The sky moving on up to the east side a family to explore strange new worlds to seek out new life and new civilizations to boldly go where no man has gone before you would see the biggest gift.</p>
+                                        <ul>
+                                            <li>Launches the last of Americas deep space.</li>
+                                            <li>Town to town and up and down the dial.</li>
+                                            <li>Kitchen and beans don't burn on the grill of maid.</li>
+                                            <li>The lady met this fellow and they knew it.</li>
+                                            <li>Most of this beautiful the day.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- /.wrapper -->
+                        </div> <!-- /.market-growth -->
+                    </div> <!-- /.service-content -->
+                </div> <!-- /.col- -->
+
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 col-12 theme-sidebar-one">
+                    <div class="sidebar-box service-categories">
+                        <h5 class="title">Our Solutions</h5>
+                        <ul>
+                            <li><a href="#">Travel and Aviation</a></li>
+                            <li class="active"><a href="#">Business Services</a></li>
+                            <li><a href="#">Consumer Products</a></li>
+                            <li><a href="#">Financial Services</a></li>
+                            <li><a href="#">Software Research</a></li>
+                            <li><a href="#">Quality Resourcing</a></li>
+                        </ul>
+                    </div> <!-- /.service-categories -->
+                    <div class="sidebar-box sidebar-brochures">
+                        <h5 class="title">Brochures</h5>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download file. pdf</a></li>
+                            <li><a href="#"><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i> Download file. ppt</a></li>
+                        </ul>
+                    </div> <!-- /.sidebar-brochures -->
+                    <div class="sidebar-box sidebar-contact">
+                        <h5 class="title">Contact Form</h5>
+                        <form action="#">
+                            <input type="text" placeholder="Name">
+                            <input type="email" placeholder="Email">
+                            <textarea placeholder="Message"></textarea>
+                            <button class="theme-button-one">SUBMIT</button>
+                        </form>
+                    </div> <!-- /.sidebar-contact -->
+                </div> <!-- /.theme-sidebar-one -->
             </div> <!-- /.row -->
         </div> <!-- /.container -->
-    </div> <!-- /.project-details -->
-
-
-    <!--
-    =====================================================
-        Testimonial Slider
-    =====================================================
-    -->
-    <div class="testimonial-section">
-        <div class="overlay">
-            <div class="container">
-                <div class="wrapper">
-                    <div class="bg">
-                        <div class="testimonial-slider">
-                            <div class="item">
-                                <p>“ A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the government they survive as soldiers of fortune to a deluxe apartment in the sky moving on up to the east side a family. ”</p>
-                                <div class="name">
-                                    <h6>Shawn Michael</h6>
-                                    <span>Founder, Mnc Inc.</span>
-                                </div> <!-- /.name -->
-                            </div> <!-- /.item -->
-                            <div class="item">
-                                <p>“ A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the government they survive as soldiers of fortune to a deluxe apartment in the sky moving on up to the east side a family. ”</p>
-                                <div class="name">
-                                    <h6>Rashed Ka.</h6>
-                                    <span>Founder, Mnc Inc.</span>
-                                </div> <!-- /.name -->
-                            </div> <!-- /.item -->
-                            <div class="item">
-                                <p>“ A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the government they survive as soldiers of fortune to a deluxe apartment in the sky moving on up to the east side a family. ”</p>
-                                <div class="name">
-                                    <h6>Mahfuz Riad</h6>
-                                    <span>Founder, Mnc Inc.</span>
-                                </div> <!-- /.name -->
-                            </div> <!-- /.item -->
-                        </div> <!-- /.testimonial-slider -->
-                    </div> <!-- /.bg -->
-                </div> <!-- /.wrapper -->
-            </div> <!-- /.container -->
-        </div> <!-- /.overlay -->
-    </div> <!-- /.testimonial-section -->
+    </div> <!-- /.service-details -->
 @endsection

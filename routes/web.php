@@ -37,6 +37,9 @@ Route::get('/industry/industry-partners-program', [IndustryController::class, 'p
 Route::get('/industry/levels-of-engagement-and-support', [IndustryController::class, 'engagement'])->name('industry.engagement');
 
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
+Route::get('/event/{event}/details', [EventController::class, 'details'])->name('events.details');
+
+
 Route::get('/publications', [PublicationController::class, 'index'])->name('publications.index');
 Route::get('/publications/details', [PublicationController::class, 'show'])->name('publications.show');
 

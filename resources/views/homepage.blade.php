@@ -199,7 +199,7 @@
                                         <div class="img-box"><img src="{{ asset('storage/'.$project->project_image) }}" alt=""></div>
                                         <div class="text">
                                             <h5><a href="{{ route('projects.show',$project->id) }}">{{ substr($project->title, 0, 16) }}</a></h5>
-                                            <p>{!! substr($project->description, 0, 20) !!}...</p>
+                                            {{-- <p>{!! substr($project->description, 0, 20) !!}...</p> --}}
                                             <a href="{{ route('projects.show',$project->id) }}" class="read-more">READ MORE <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         </div> <!-- /.text -->
                                     </div> <!-- /.single-service -->

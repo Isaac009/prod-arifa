@@ -24,21 +24,9 @@
 				<div class="container">
 					<div class="wrapper">
 						<div class="row">
-							{{-- @foreach ($projects as $project)
-                            <div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('storage/'.$project->project_image) }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="{{ route('projects.show',$project->id) }}">{{ $project->title }}</a></h5>
-											</div>
-											<a href="{{ route('projects.show',$project->id) }}" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-                            @endforeach --}}
+                            <p>
+                                ARIFA is focused on contributing to IT & AI research and engineering efforts intended to benefit the common good. Join us to tackle an extraordinary set of challenges and help build “a future where ARIFA empowers humanity by contributing to a more just, equitable, and prosperous world.”
+                            </p>
 						</div> <!-- /.row -->
 					</div> <!-- /.wrapper -->
 					<div class="theme-pagination text-center">

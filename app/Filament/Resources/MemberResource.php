@@ -41,25 +41,29 @@ class MemberResource extends Resource
                 Section::make('User Info')
                 ->description('Provide the user basic information here.')
                 ->schema([
+                    Select::make('member_group_id')
+                    ->label('Member Group Name')
+                    ->relationship(name: 'member_group', titleAttribute: 'name')
+                    ->required(),
                     Select::make('titles')
                     ->required()
                     ->multiple()
                     ->options(['Adv.'=>'Advocate' ,'Mr.'=>'Mr.', 'Hon.'=>'Honorable',
                     'Mrs.'=>'Mrs.', 'Dr.'=>'Doctor', 'Eng.'=>'Engineer', 'Prof.'=>'Professor',
                     'Sir.'=>'Sir','Research Assistant'=>'Research Assistant']),
-                TextInput::make('name')
-                    ->required()
-                    ->autofocus()
-                    ->maxLength(255),
-                TextInput::make('email')
-                    ->required()
-                    ->email()
-                    ->maxLength(255),
-                Datepicker::make('date_of_birth')
-                    ->required(),
-                Datepicker::make('joined_since')
-                    ->required(),
-                ])->columns(2)
+                    TextInput::make('name')
+                        ->required()
+                        ->autofocus()
+                        ->maxLength(255),
+                    TextInput::make('email')
+                        ->required()
+                        ->email()
+                        ->maxLength(255),
+                    Datepicker::make('date_of_birth')
+                        ->required(),
+                    Datepicker::make('joined_since')
+                        ->required(),
+                    ])->columns(2)
                 ,
                 Section::make('User Address')
                 ->description('Provide the user address details here.')
@@ -131,13 +135,13 @@ class MemberResource extends Resource
                 ImageColumn::make('profile_photo_url'),
                 TextColumn::make('titles'),
                 TextColumn::make('name')->sortable()->searchable(),
-                TextColumn::make('name')->sortable()->searchable(),
+                TextColumn::make('member_group.name')->sortable()->searchable(),
                 TextColumn::make('name')->sortable()->searchable(),
                 TextColumn::make('email')->sortable()->searchable(),
                 TextColumn::make('address')->sortable()->searchable(),
                 TextColumn::make('date_of_birth')->sortable()->searchable()->date(),
                 TextColumn::make('joined_since')->sortable()->searchable()->date(),
-                TextColumn::make('created_at')->dateTime()
+                // TextColumn::make('created_at')->dateTime()
             ])
             ->filters([
                 //

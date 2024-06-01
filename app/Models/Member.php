@@ -15,6 +15,7 @@ class Member extends Model
     use HasFactory;
 
     protected $fillable = [
+        'member_group_id',
         'titles',
         'name',
         'email',
@@ -37,6 +38,10 @@ class Member extends Model
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);
+    }
+
+    public function member_group(): BelongsTo{
+        return $this->belongsTo(MemberGroup::class);
     }
 
     public function state(): BelongsTo

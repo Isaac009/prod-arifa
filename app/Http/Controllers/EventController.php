@@ -22,4 +22,8 @@ class EventController extends Controller
         $events = $events->paginate(10);
         return view('frontend/events.index', compact('events'));
     }
+
+    public function details(Event $event){
+        return view('frontend/events.details', compact('event'));
+    }
 }

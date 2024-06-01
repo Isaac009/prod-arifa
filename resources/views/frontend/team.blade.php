@@ -24,8 +24,11 @@
     <div class="our-team section-spacing">
         <div class="container">
             <div class="wrapper">
+                @forelse($groups as $group)
+                    <h2>{{ $group->name }}</h2>
+                    <hr>
                 <div class="row">
-                    @forelse ($members as $member)
+                    @forelse ($group->members as $member)
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="team-member">
                             <div class="image-box">
@@ -58,7 +61,11 @@
                     @empty
                         <p>No Team Yet.</p>
                     @endforelse
+
                 </div> <!-- /.row -->
+                @empty
+                    <p>No Team Groups Yet.</p>
+                @endforelse
             </div> <!-- /.wrapper -->
         </div> <!-- /.container -->
     </div> <!-- /.our-team -->

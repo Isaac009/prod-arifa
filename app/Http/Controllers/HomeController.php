@@ -8,6 +8,7 @@ use App\Models\Sponsor;
 use App\Mail\ContactMail;
 use App\Models\Institute;
 use App\Models\Objective;
+use App\Models\MemberGroup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
@@ -37,9 +38,10 @@ class HomeController extends Controller
     }
 
     public function team(){
-        $members = Member::all();
+        // $members = Member::all();
+        $groups = MemberGroup::with('members')->get();
         $sponsors = Sponsor::all();
-        return view('frontend.team', compact('members', 'sponsors'));
+        return view('frontend.team', compact('groups', 'sponsors'));
     }
 
     public function team_member_details(Member $member){

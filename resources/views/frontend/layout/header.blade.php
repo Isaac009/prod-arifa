@@ -52,7 +52,7 @@
 									    <li class="{{ request()->routeIs('objectives')?'active':'' }}"><a href="#">Research</a>
 									    	<ul class="dropdown">
 									        	<li><a href="{{ route('projects') }}">Research Projects</a></li>
-									        	<li><a href="service-v2.html">Research & Development</a></li>
+									        	<li><a href="#">Research & Development</a></li>
 									       </ul>
 									    </li>
 										<li class="{{ request()->routeIs('industry.*')?'active':'' }}"><a href="#">Industry</a>

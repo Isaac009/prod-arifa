@@ -90,7 +90,7 @@
                                     <div class="event-details">
                                         <h5>{{ $event->topic }}</h5>
                                         <p>{!! $event->description !!}</p>
-                                        <a href="#" class="btn btn-link">Event Details</a>
+                                        <a href="{{ route('events.details',$event->id) }}" class="btn btn-link">Event Details</a>
                                     </div>
                                 </div>
                             </div>
