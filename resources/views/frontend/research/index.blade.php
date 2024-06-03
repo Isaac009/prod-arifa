@@ -28,6 +28,9 @@
                             <div class="col-lg-4 col-sm-6 col-12">
 								<div class="single-case-block">
 									<img src="{{ asset('storage/'.$project->project_image) }}" alt="">
+                                    @if ($project->project_image !== null)
+                                        <img src="{{ asset('storage/'.$project->project_image) }}" alt="">
+                                    @endif
 									<div class="hover-content">
 										<div class="text clearfix">
 											<div class="float-left">

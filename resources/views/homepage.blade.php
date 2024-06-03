@@ -20,9 +20,10 @@
         }
 
         .slide1 { background-image: url('images/slide1.jpg'); }
-        .slide2 { background-image: url('images/slide2.png'); }
-        .slide3 { background-image: url('images/slide3.png'); }
-        .slide4 { background-image: url('images/slide5.png'); }
+        .slide2 { background-image: url('images/slide2.jpg'); }
+        .slide3 { background-image: url('images/slide3.jpg'); }
+        .slide3 { background-image: url('images/slide4.jpg'); }
+        .slide4 { background-image: url('images/slide5.jpg'); }
 
         @keyframes slide {
             0% { transform: translateX(0); }
@@ -94,29 +95,41 @@
 					<div class="item">
 						<div class="main-content" style="background:#fafafa;">
 							<img src="{{ asset('front-resources/images/icon/1.png') }}" alt="">
-							<h4><a href="#">Consumer Insights</a></h4>
-							<p>The east side to a deluxe apartment in move on up to the east side</p>
+							<h4><a href="#">Conduct Cutting-Edge AI Research</a></h4>
+							<p>Undertake interdisciplinary research to advance the understanding and application of AI in addressing
+                                real-world challenges.</p>
 						</div> <!-- /.main-content -->
 					</div> <!-- /.item -->
 					<div class="item">
 						<div class="main-content" style="background:#f6f6f6;">
-							<img src="{{ asset('front-resources/images/icon/2.png') }}" alt="">
-							<h4><a href="#">Emerging Ideas</a></h4>
-							<p>The east side to a deluxe apartment in move on up to the east side</p>
+							<img src="{{ asset('front-resources/images/icon/3.png') }}" alt="">
+							<h4><a href="#">Provide Comprehensive AI Training</a></h4>
+							<p>Deliver training programs to enhance the skills and knowledge of individuals and organizations,
+                                fostering a proficient workforce in the field of AI.</p>
 						</div> <!-- /.main-content -->
 					</div> <!-- /.item -->
 					<div class="item">
 						<div class="main-content" style="background:#efefef;">
-							<img src="{{ asset('front-resources/images/icon/3.png') }}" alt="">
-							<h4><a href="#">Thought Leadership</a></h4>
-							<p>The east side to a deluxe apartment in move on up to the east side</p>
+							<img src="{{ asset('front-resources/images/icon/2.png') }}" alt="">
+							<h4><a href="#">Promote Ethical AI Practices</a></h4>
+							<p>Advocate for and promote ethical considerations in AI development and deployment, emphasizing
+                                responsible practices and inclusive approaches.</p>
 						</div> <!-- /.main-content -->
 					</div> <!-- /.item -->
 					<div class="item">
 						<div class="main-content" style="background:#e9e9e9;">
 							<img src="{{ asset('front-resources/images/icon/4.png') }}" alt="">
-							<h4><a href="#">Marketing Goals</a></h4>
-							<p>The east side to a deluxe apartment in move on up to the east side</p>
+							<h4><a href="#">Influence Evidence-Based AI Policies</a></h4>
+							<p>Generate insights from research to inform evidence-based policies and regulations, contributing to the
+                                responsible governance of AI technologies.</p>
+						</div> <!-- /.main-content -->
+					</div> <!-- /.item -->
+                    <div class="item">
+						<div class="main-content" style="background:#e9e9e9;">
+							<img src="{{ asset('front-resources/images/icon/4.png') }}" alt="">
+							<h4><a href="#">Address Societal Challenges with AI Impact</a></h4>
+							<p>{{ Str::substr("Utilize AI research and applications to address societal challenges, focusing on leveraging technology
+                                for positive social impact, sustainability, and community well-being.", 0, 170) }} ...</p>
 						</div> <!-- /.main-content -->
 					</div> <!-- /.item -->
 				</div> <!-- /.top-features-slide -->
@@ -173,8 +186,8 @@
 			<div class="feature-banner section-spacing">
 				<div class="opacity">
 					<div class="container">
-						<h2>Join  us as we help build "a feature where Artificial Intelligence empowers
-							humanity by contributing to a more just, equitable, and prosperous world."
+						<h2>Join  us as we help build <span style="font-style: italic; font-family: Lucida Calligraphy">"a feature where Artificial Intelligence empowers
+							humanity by contributing to a more just, equitable, and prosperous world".</span>
 						</h2>
 						<a href="#" class="theme-button-one">JOIN US</a>
 					</div> <!-- /.container -->
@@ -199,7 +212,9 @@
                                 @foreach ($projects as $project)
                                 <div class="col-xl-4 col-md-6 col-12">
                                     <div class="single-service">
+                                        @if ($project->project_image !== null)
                                         <div class="img-box"><img src="{{ asset('storage/'.$project->project_image) }}" alt=""></div>
+                                        @endif
                                         <div class="text">
                                             <h5><a href="{{ route('research.projects.show',$project->id) }}">{{ substr($project->title, 0, 16) }}</a></h5>
                                             {{-- <p>{!! substr($project->description, 0, 20) !!}...</p> --}}
@@ -292,6 +307,11 @@
 													<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
 												</ul>
 												<p>{!! Str::substr($member->bio, 0, 60) !!}...</p>
+                                                <button type="button" class="btn btn-primary"
+                                                data-toggle="modal" data-target="#memberModal"
+                                                data-member-id="{{ $member->id }}">
+                                                    View Member Details
+                                                </button>
 											</div> <!-- /.hover-content -->
 										</div> <!-- /.overlay -->
 									</div> <!-- /.image-box -->
@@ -316,6 +336,23 @@
 					</div> <!-- /.wrapper -->
 				</div> <!-- /.container -->
 			</div> <!-- /.our-team -->
+
+            <div class="modal fade" id="memberModal" tabindex="-1" role="dialog"
+            aria-labelledby="memberModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="memberModalLabel">Member Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Member details will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 			<!--
@@ -362,51 +399,36 @@
 				</div> <!-- /.container -->
 			</div> <!-- /.theme-counter --> --}}
 
-
-			<!--
-			=====================================================
-				Free Consultation
-			=====================================================
+            <!--
+			=============================================
+				Core Values
+			==============================================
 			-->
-			<div class="consultation-form section-spacing">
+			<div class="core-values">
 				<div class="container">
 					<div class="theme-title-one">
-						<h2>FREE CONSULTATION</h2>
-						<p>A tale of a fateful trip that started from this tropic port aboard this tiny ship today stillers</p>
+						<h2>RECENT EVENTS</h2>
 					</div> <!-- /.theme-title-one -->
-					<div class="clearfix main-content no-gutters row">
-						<div class="col-xl-6 col-lg-5 col-12">
-                            <div>
-                                <img src="{{ asset('images/in-touch.png') }}" alt="">
-                            </div>
-                        </div>
-						<div class="col-xl-6 col-lg-7 col-12">
-							<div class="form-wrapper">
-								<form action="#" class="theme-form-one">
-									<div class="row">
-										<div class="col-md-6"><input type="text" placeholder="Name *"></div>
-										<div class="col-md-6"><input type="text" placeholder="Phone *"></div>
-										<div class="col-md-6"><input type="email" placeholder="Email *"></div>
-										<div class="col-md-6">
-											<select class="form-control" id="exampleSelect1">
-										      <option>Service you’re looking for?</option>
-										      <option>Business Services</option>
-										      <option>Consumer Product</option>
-										      <option>Financial Services</option>
-										      <option>Software Research</option>
-										    </select>
-										</div>
-										<div class="col-12"><textarea placeholder="Message"></textarea></div>
-									</div> <!-- /.row -->
-									<button class="theme-button-one">GET A QUOTES</button>
-								</form>
-							</div> <!-- /.form-wrapper -->
-						</div> <!-- /.col- -->
-					</div> <!-- /.main-content -->
+					<div class="wrapper">
+						<div class="core-value-slider">
+							@foreach ($events as $event)
+                            <div class="item">
+								<div class="single-value-block">
+									<div class="image-box">
+										<img src="{{ asset($event->image != null ? 'storage/'.$event->image : 'images/event_default.png') }}" alt="">
+										<div class="overlay"><a href="{{ route('events.details',$event->id) }}" class="theme-button-one">READ MORE</a></div>
+									</div> <!-- /.image-box -->
+									<div class="text">
+										<h5><a href="{{ route('events.details',$event->id) }}">{{ Str::substr($event->topic, 0, 50) }}...</a></h5>
+										<p>{!! Str::substr($event->description, 0, 60) !!}</p>
+									</div> <!-- /.text -->
+								</div> <!-- /.single-value-block -->
+							</div> <!-- /.col- -->
+                            @endforeach
+						</div> <!-- /.core-value-slider -->
+					</div> <!-- /.wrapper -->
 				</div> <!-- /.container -->
-			</div> <!-- /.consultation-form -->
-
-
+			</div> <!-- /.core-values -->
 
 			<!--
 			=====================================================
@@ -444,6 +466,24 @@
             var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
                 return new bootstrap.Popover(popoverTriggerEl)
             })
+        });
+
+        $('#memberModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var memberId = button.data('member-id'); // Extract member ID from data-* attributes
+
+            // Make an AJAX request to fetch member details
+            $.ajax({
+                url: '/team/' + memberId, // Assuming you have a route for fetching member details
+                method: 'GET',
+                success: function(response) {
+                    // Update modal body with member details
+                    $('#memberModal .modal-body').html(response);
+                },
+                error: function(xhr) {
+                    console.error('Error fetching member details:', xhr);
+                }
+            });
         });
     </script>
 @endpush

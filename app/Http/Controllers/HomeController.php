@@ -24,8 +24,9 @@ class HomeController extends Controller
         $projects = Project::latest()->take(8)->get();
         $team = Member::take(4)->get();
         $sponsors = Sponsor::all();
+        $events = Event::latest()->take(3)->get();
         Session::flash('message', 'Welcome to ARIFA!');
-        return view('homepage', compact('institute','projects','team','sponsors'));
+        return view('homepage', compact('institute','projects','team','sponsors', 'events'));
     }
 
     public function about(){

@@ -13,7 +13,7 @@
 							<div class="col-xl-3 col-lg-4 col-sm-6 about-widget">
 								<h6 class="title">ABOUT {{ $institute->name }}</h6>
 								<p>Africa Research Institute For AI (ARIFA), is a not-for-profit think tank united by a shared commitment to advancing impactful research, training and advisory. ARIFA is specifically focused on Sub-Saharan Africa (SSA) and ...
-                                    <a href="{{ route('about') }}">READ MORE...</a>
+                                    <a href="{{ route('about') }}" style="color: white">READ MORE...</a>
                                 </p>
 
 								<div class="queries"><i class="flaticon-phone-call"></i> Any Queries : <a href="#">+{{ $institute->phone }}</a></div>

@@ -24,6 +24,7 @@
 				<div class="container">
 					<div class="wrapper">
 						<div class="row">
+                            <span>No Calls yet.</span>
 							{{-- @foreach ($projects as $project)
                             <div class="col-lg-4 col-sm-6 col-12">
 								<div class="single-case-block">

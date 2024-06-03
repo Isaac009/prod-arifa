@@ -26,11 +26,10 @@
 						<div class="col-xl-9 col-lg-8 col-12">
 							<div class="service-content">
 								<img src="{{ asset('images/project_placeholder.png') }}" alt="" class="cover-img">
-								<h3 class="main-title">Business Services</h3>
-								<p>A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the government  apartment in the sky moving on up to the east side a family to explore strange new worlds to seek out new life and new civilizations to boldly go where no man has gone before you would see the biggest gift would be from me and the card attached would say thank you for being a friend.</p>
-								<p>That this group would somehow form a family that's the way we all became the Brady Bunch apartment in the sky moving on up to the east side a family to explore strange new worlds.</p>
-								<p>This tropic port aboard this tiny ship today still wanted by the government apartment in the sky moving on up to the east side a family to explore strange new worlds to seek out new life and new civilizations to boldly go where no man has gone before you would see the biggest gift would be from me and the card.</p>
-								<div class="presentation-section">
+								<h3 class="main-title">{{ $event->topic }}</h3>
+								<p>{!! $event->description !!}</p>
+
+								{{-- <div class="presentation-section">
 									<h4 class="sub-heading">Company Presentation:</h4>
 									<p>That this group would somehow form a family that's the way we all became the Brady Bunch apartment in the sky moving on up to the east side a family to explore strange new worlds.</p>
 									<div class="row">
@@ -55,9 +54,9 @@
 										</div>
 										<div class="col-md-6 col-12"><img src="images/home/pattern3.png" alt="" class="chart"></div>
 									</div>
-								</div> <!-- /.presentation-section -->
+								</div> <!-- /.presentation-section --> --}}
 
-								<div class="topics">
+								{{-- <div class="topics">
 									<h4 class="sub-heading">Usefull Topics:</h4>
 									<div class="accordion-one">
 										<div class="panel-group theme-accordion" id="accordion">
@@ -128,9 +127,9 @@
 										  </div> <!-- /panel 5 -->
 										</div> <!-- end #accordion -->
 									</div> <!-- End of .accordion-one -->
-								</div> <!-- /.topics -->
+								</div> <!-- /.topics --> --}}
 
-								<div class="market-growth">
+								{{-- <div class="market-growth">
 									<h4 class="sub-heading">Reliable Market Growth:</h4>
 									<div class="wrapper">
 										<div class="row">
@@ -147,12 +146,12 @@
 											</div>
 										</div>
 									</div> <!-- /.wrapper -->
-								</div> <!-- /.market-growth -->
+								</div> <!-- /.market-growth --> --}}
 							</div> <!-- /.service-content -->
 						</div> <!-- /.col- -->
 
 						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 col-12 theme-sidebar-one">
-							<div class="sidebar-box service-categories">
+							{{-- <div class="sidebar-box service-categories">
 								<h5 class="title">Our Solutions</h5>
 								<ul>
 									<li><a href="#">Travel and Aviation</a></li>
@@ -162,13 +161,19 @@
 									<li><a href="#">Software Research</a></li>
 									<li><a href="#">Quality Resourcing</a></li>
 								</ul>
-							</div> <!-- /.service-categories -->
+							</div> <!-- /.service-categories --> --}}
 							<div class="sidebar-box sidebar-brochures">
-								<h5 class="title">Brochures</h5>
-								<ul>
-									<li><a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download file. pdf</a></li>
-									<li><a href="#"><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i> Download file. ppt</a></li>
+								<h5 class="title">Resources</h5>
+                                <hr>
+								@if ($event->documents)
+                                <ul>
+                                    @foreach ($event->documents as $item)
+                                        <li><a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download file. pdf</a></li>
+                                    @endforeach
 								</ul>
+                                @else
+                                    <span>No resources attached.</span>
+                                @endif
 							</div> <!-- /.sidebar-brochures -->
 							<div class="sidebar-box sidebar-contact">
 								<h5 class="title">Contact Form</h5>
