@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use App\Models\Member;
 use App\Models\Project;
 use App\Models\Sponsor;

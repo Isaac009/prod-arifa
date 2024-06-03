@@ -46,7 +46,7 @@
                                             {{ $title }}
                                         @endforeach
                                         {{ $member->name }}</h6>
-                                <span>Sales Consultant</span>
+                                {{-- <span>Sales Consultant</span> --}}
                             </div> <!-- /.text -->
                         </div> <!-- /.team-member -->
                     </div> <!-- /.col- -->

@@ -31,10 +31,10 @@
 									<div class="hover-content">
 										<div class="text clearfix">
 											<div class="float-left">
-												<h5><a href="{{ route('projects.show',$project->id) }}">{{ $project->title }}</a></h5>
+												<h5><a href="{{ route('research.projects.show',$project->id) }}">{{ $project->title }}</a></h5>
 												{{-- <p>Explore strange new worlds</p> --}}
 											</div>
-											<a href="{{ route('projects.show',$project->id) }}" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+											<a href="{{ route('research.projects.show',$project->id) }}" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 										</div> <!-- /.text -->
 									</div> <!-- /.hover-content -->
 								</div> <!-- /.single-case-block -->

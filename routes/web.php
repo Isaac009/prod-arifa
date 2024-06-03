@@ -11,6 +11,7 @@ use App\Http\Controllers\IndustryController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\OpportunityController;
 use App\Http\Controllers\PublicationController;
+use App\Http\Controllers\ResearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,10 @@ Route::get('/opportunities/details', [OpportunityController::class, 'show'])->na
 Route::get('/opportunities/Call-for-proposal', [OpportunityController::class, 'callforpaper'])->name('opportunities.call-for-papers');
 Route::get('/opportunities/become-instructor', [OpportunityController::class, 'becomeinstructor'])->name('opportunities.become-instructor');
 Route::get('/opportunities/careers', [OpportunityController::class, 'careers'])->name('opportunities.careers');
+
+Route::get('/research/research-and-dev', [ResearchController::class, 'researchDev'])->name('research.dev');
+Route::get('/research/research-projects', [ResearchController::class, 'researchProjects'])->name('research.projects');
+Route::get('/research/research-projects/{project}/project', [ResearchController::class, 'show'])->name('research.projects.show');
 
 Route::get('/training/program', [TrainingController::class, 'program'])->name('training.program');
 Route::get('/training/corporate-training', [TrainingController::class, 'corporate'])->name('training.corporate');

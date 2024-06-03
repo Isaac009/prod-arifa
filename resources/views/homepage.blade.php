@@ -136,7 +136,10 @@
 							<div class="text">
 								<div class="theme-title-one">
 									<h2>About Our {{ $institute->name }}</h2>
-									<p>{{ $institute->about }}</p>
+									<p>Africa Research Institute For AI (ARIFA), is a not-for-profit think tank united by a shared commitment to advancing impactful research, training and advisory. ARIFA is specifically focused on Sub-Saharan Africa (SSA) and seeks to foster innovation, facilitate knowledge exchange, and drive evidence-based policymaking to effectively tackle the dynamic challenges posed by the rapid advancements in technology.
+                                        Rooted in its commitment to interdisciplinary research and collaboration, ARIFA has emerged as a pivotal force within the research and development (R&D) sector. As a key player in the renaissance of AI, ARIFA actively contributes to shaping the future integration of AI and other emerging technologies into the fabric of modern society.
+                                        Since its inception, ARIFA has been dedicated to fostering a renaissance in AI, leveraging computational power and abundant data to push the boundaries of real-world applications. As ARIFA continues its journey, its historic background stands as a testament to its founding principles, serving as a foundation for growth, impact, and a relentless pursuit of excellence in the ever-evolving fields of AI and other Emerging Technologies.
+                                    </p>
 								</div> <!-- /.theme-title-one -->
 								<ul class="mission-goal clearfix">
 									<li>
@@ -198,9 +201,9 @@
                                     <div class="single-service">
                                         <div class="img-box"><img src="{{ asset('storage/'.$project->project_image) }}" alt=""></div>
                                         <div class="text">
-                                            <h5><a href="{{ route('projects.show',$project->id) }}">{{ substr($project->title, 0, 16) }}</a></h5>
+                                            <h5><a href="{{ route('research.projects.show',$project->id) }}">{{ substr($project->title, 0, 16) }}</a></h5>
                                             {{-- <p>{!! substr($project->description, 0, 20) !!}...</p> --}}
-                                            <a href="{{ route('projects.show',$project->id) }}" class="read-more">READ MORE <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                            <a href="{{ route('research.projects.show',$project->id) }}" class="read-more">READ MORE <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         </div> <!-- /.text -->
                                     </div> <!-- /.single-service -->
                                 </div> <!-- /.col- -->

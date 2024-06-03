@@ -49,10 +49,10 @@
 									    		<li><a href="{{ route('team') }}">Our team</a></li>
 									       </ul>
 									    </li>
-									    <li class="{{ request()->routeIs('objectives')?'active':'' }}"><a href="#">Research</a>
+									    <li class="{{ request()->routeIs('research')?'active':'' }}"><a href="#">Research</a>
 									    	<ul class="dropdown">
-									        	<li><a href="{{ route('projects') }}">Research Projects</a></li>
-									        	<li><a href="#">Research & Development</a></li>
+									        	<li><a href="{{ route('research.projects') }}">Research Projects</a></li>
+									        	<li><a href="{{ route('research.dev') }}">Research & Development</a></li>
 									       </ul>
 									    </li>
 										<li class="{{ request()->routeIs('industry.*')?'active':'' }}"><a href="#">Industry</a>

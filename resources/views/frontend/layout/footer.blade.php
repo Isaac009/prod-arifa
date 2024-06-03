@@ -12,26 +12,27 @@
 						<div class="row">
 							<div class="col-xl-3 col-lg-4 col-sm-6 about-widget">
 								<h6 class="title">ABOUT {{ $institute->name }}</h6>
-								<p>{{ $institute->about }}</p>
+								<p>Africa Research Institute For AI (ARIFA), is a not-for-profit think tank united by a shared commitment to advancing impactful research, training and advisory. ARIFA is specifically focused on Sub-Saharan Africa (SSA) and ...
+                                    <a href="{{ route('about') }}">READ MORE...</a>
+                                </p>
+
 								<div class="queries"><i class="flaticon-phone-call"></i> Any Queries : <a href="#">+{{ $institute->phone }}</a></div>
 							</div> <!-- /.about-widget -->
 							<div class="col-xl-4 col-lg-3 col-sm-6 footer-recent-post">
 								<h6 class="title">RECENT POSTS</h6>
 								<ul>
-									<li class="clearfix">
-										<img src="{{ asset('front-resources/images/blog/1.jpg') }}" alt="" class="float-left">
+                                    @php
+                                        $events = \App\Models\Event::latest()->take(2)->get();
+                                    @endphp
+									@foreach ($events as $event)
+                                    <li class="clearfix">
+										<img src="{{ asset($event->image != null ? 'storage/'.$event->image : 'images/event_default.png') }}" alt="" class="float-left">
 										<div class="post float-left">
-											<a href="blog-details.html">Till wanted by theam govern they survive as soldiers.</a>
+											<a href="{{ route('events.details',$event->id) }}">{{ $event->topic }}</a>
 											<div class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i> Feb 06, 2018</div>
 										</div>
 									</li>
-									<li class="clearfix">
-										<img src="{{ asset('front-resources/images/blog/2.jpg') }}" alt="" class="float-left">
-										<div class="post float-left">
-											<a href="blog-details.html">World don't move to beat of just one drum.</a>
-											<div class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i> Mar 20, 2018</div>
-										</div>
-									</li>
+                                    @endforeach
 								</ul>
 							</div> <!-- /.footer-recent-post -->
 							<div class="col-xl-2 col-lg-3 col-sm-6 footer-list">
