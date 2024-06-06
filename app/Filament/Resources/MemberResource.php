@@ -49,7 +49,7 @@ class MemberResource extends Resource
                     ->required()
                     ->multiple()
                     ->options(['Adv.'=>'Advocate' ,'Mr.'=>'Mr.', 'Hon.'=>'Honorable',
-                    'Mrs.'=>'Mrs.', 'Dr.'=>'Doctor', 'Eng.'=>'Engineer', 'Prof.'=>'Professor',
+                    'Ms'=>'Miss','Mrs.'=>'Mrs.', 'Dr.'=>'Doctor', 'Eng.'=>'Engineer', 'Prof.'=>'Professor',
                     'Sir.'=>'Sir','Research Assistant'=>'Research Assistant']),
                     TextInput::make('name')
                         ->required()
