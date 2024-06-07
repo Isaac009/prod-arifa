@@ -136,7 +136,6 @@ class MemberResource extends Resource
                 TextColumn::make('titles'),
                 TextColumn::make('name')->sortable()->searchable(),
                 TextColumn::make('member_group.name')->sortable()->searchable(),
-                TextColumn::make('name')->sortable()->searchable(),
                 TextColumn::make('email')->sortable()->searchable(),
                 TextColumn::make('address')->sortable()->searchable(),
                 TextColumn::make('date_of_birth')->sortable()->searchable()->date(),

@@ -44,6 +44,7 @@
 									<li><a href="{{ route('opportunities.call-for-papers') }}">Call for Paper</a></li>
 									<li><a href="{{ route('publications.index') }}">Publications</a></li>
 									<li><a href="{{ route('opportunities.index') }}">Opportunities</a></li>
+                                    <li><a href="{{ route('blogs.index') }}">Blogs</a></li>
 								</ul>
 							</div> <!-- /.footer-list -->
 							<div class="col-xl-3 col-lg-2 col-sm-6 footer-newsletter">

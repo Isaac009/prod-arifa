@@ -42,13 +42,13 @@
                             @endforeach --}}
 						</div> <!-- /.row -->
 					</div> <!-- /.wrapper -->
-					<div class="theme-pagination text-center">
+					{{-- <div class="theme-pagination text-center">
 						<ul>
 							<li><a href="#">1</a></li>
 							<li class="active"><a href="#">2</a></li>
 							<li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
 						</ul>
-					</div>
+					</div> --}}
 				</div> <!-- /.container -->
 			</div> <!-- /.our-case -->
 

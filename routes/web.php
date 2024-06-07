@@ -2,16 +2,17 @@
 
 use App\Models\Publication;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\IndustryController;
+use App\Http\Controllers\ResearchController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\OpportunityController;
 use App\Http\Controllers\PublicationController;
-use App\Http\Controllers\ResearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,9 @@ Route::get('/industry/levels-of-engagement-and-support', [IndustryController::cl
 
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 Route::get('/event/{event}/details', [EventController::class, 'details'])->name('events.details');
+
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
+Route::get('/blog/{blog}/details', [BlogController::class, 'details'])->name('blogs.details');
 
 
 Route::get('/publications', [PublicationController::class, 'index'])->name('publications.index');
