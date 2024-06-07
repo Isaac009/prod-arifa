@@ -169,7 +169,7 @@
 								@if ($blog->attachments)
                                 <ul>
                                     @foreach ($blog->attachments as $item)
-                                        <li><a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download file. pdf</a></li>
+                                        <li><a href="{{ asset('storage/'.$item) }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download file. pdf</a></li>
                                     @endforeach
 								</ul>
                                 @else
