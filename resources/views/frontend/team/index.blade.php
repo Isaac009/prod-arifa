@@ -29,7 +29,7 @@
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="team-member">
                             <div class="image-box">
-                                <img src="{{ asset('storage/'.$member->profile_photo_url) }}" width="130px" height="240px" alt="">
+                                <img src="{{ asset('storage/'.$member->profile_photo_url) }}" class="image_size" alt="">
 										<div class="overlay">
 											<div class="hover-content">
 												<ul>

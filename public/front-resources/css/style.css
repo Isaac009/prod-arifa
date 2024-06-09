@@ -3566,3 +3566,51 @@ body .theme-button-one:hover {
     padding: 0 20px;
     border: 1px solid #f0f0f0;
 }
+
+
+/* Additional Styles For Image size
+ */
+
+
+/* For small devices (mobiles) */
+
+@media only screen and (max-width: 600px) {
+    .image_size {
+        width: 130px;
+        height: 460px;
+    }
+    /* Additional styles for small devices */
+}
+
+
+/* For tablets (portrait mode) */
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .image_size {
+        width: 130px;
+        height: 260px;
+    }
+    /* Additional styles for tablets in portrait mode */
+}
+
+
+/* For tablets (landscape mode) */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .image_size {
+        width: 130px;
+        height: 420px;
+    }
+    /* Additional styles for tablets in landscape mode */
+}
+
+
+/* For devices larger than tablets (desktops) */
+
+@media only screen and (min-width: 1024px) {
+    .image_size {
+        width: 130px;
+        height: 420px;
+    }
+    /* Additional styles for larger devices */
+}

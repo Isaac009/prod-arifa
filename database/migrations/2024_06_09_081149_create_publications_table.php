@@ -13,6 +13,17 @@ return new class extends Migration
     {
         Schema::create('publications', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('publication_type_id')->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            $table->foreignId('publication_tag_id')->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            $table->string('title');
+            $table->date('published_on');
+            $table->longText('content');
+            $table->string('image');
+            $table->string('attachments');
             $table->timestamps();
         });
     }

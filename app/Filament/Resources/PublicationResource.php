@@ -2,16 +2,30 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Forms;
+use Filament\Tables;
+use Filament\Forms\Form;
+use Filament\Tables\Table;
+use App\Models\Publication;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Section;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
+use Illuminate\Database\Eloquent\Builder;
+use Filament\Forms\Components\DatePicker;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PublicationResource\Pages;
 use App\Filament\Resources\PublicationResource\RelationManagers;
-use App\Models\Publication;
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
-use Filament\Tables;
-use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\PublicationResource\Pages\EditPublication;
+use App\Filament\Resources\PublicationResource\Pages\ListPublications;
+use App\Filament\Resources\PublicationResource\Pages\CreatePublication;
 
 class PublicationResource extends Resource
 {
@@ -27,7 +41,62 @@ class PublicationResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Section::make('Publication Details')
+                ->description('Provide the publication details here.')
+                ->schema([
+                    Select::make('publication_type_id')
+                    ->label('Publication Category/Type')
+                    ->relationship(name: 'PublicationType', titleAttribute: 'name')
+                    ->required()
+                    ->searchable()
+                    ->preload(),
+                    Select::make('publication_tag_id')
+                    ->relationship(name: 'publicationTag', titleAttribute: 'name')
+                    ->required()
+                    ->searchable()
+                    ->preload(),
+                    TextInput::make('title')
+                        ->label('Publication Title')
+                        ->required()
+                        ->autofocus()
+                        ->maxLength(255),
+                    Datepicker::make('published_on')
+                        ->label('Publication Date')
+                        ->required(),
+                    FileUpload::make('image')
+                        ->label('Publication Photo')
+                        ->uploadingMessage('Uploading publication photo...')
+                        ->imageEditor()
+                        ->preserveFilenames()
+                        ->directory('images')
+                        ->image(),
+                    ])->columns(2)
+                ,
+                Section::make()
+                    ->schema([
+                    RichEditor::make('content')
+                        ->label('Publication Content')
+                        ->required()
+                        ->toolbarButtons([
+                            'blockquote',
+                            'bold',
+                            'bulletList',
+                            'h2',
+                            'h3',
+                            'italic',
+                            'orderedList',
+                            'redo',
+                            'underline',
+                            'undo',
+                        ]),
+                    FileUpload::make('attachments')
+                        ->label('Attachments')
+                        ->uploadingMessage('Uploading publications resources (Multiple attachments allowed)')
+                        ->directory('attachments')
+                        ->multiple()
+                        ->storeFileNamesIn('attachments')
+                ]),
+
             ]);
     }
 
@@ -35,7 +104,11 @@ class PublicationResource extends Resource
     {
         return $table
             ->columns([
-                //
+                ImageColumn::make('image'),
+                TextColumn::make('title'),
+                TextColumn::make('publicationType.name')->sortable()->searchable(),
+                TextColumn::make('publicationTag.name')->sortable()->searchable(),
+                TextColumn::make('published_on')->sortable()->searchable()->date(),
             ])
             ->filters([
                 //

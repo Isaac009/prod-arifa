@@ -24,6 +24,12 @@
     <div class="our-team section-spacing">
         <div class="container">
             <div class="wrapper">
+                <div class="row" style="margin: 10px; display: flex; justify-content: center;">
+                    <p>ARIFA has a team of over 200 members across the world and many fields and disciplines, attracting talented individuals interested in applying their skills at the forefront of AI and other Emerging Technologies for good.
+                        ARIFA prides itself on the diversity and collaboration of its team members, who work together to foster a results-oriented approach to complex challenges in AI and other Emerging Technologies.</p>
+                </div>
+                <hr>
+                <br>
                 @forelse($groups as $group)
                     <h2>{{ $group->name }}</h2>
                     <hr>

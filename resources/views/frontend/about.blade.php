@@ -15,44 +15,6 @@
 				</div> <!-- /.overlay -->
 			</div> <!-- /.theme-inner-banner -->
 
-
-			<!--
-			=============================================
-				CallOut Banner
-			==============================================
-			-->
-			{{-- <div class="callout-banner no-bg">
-				<div class="container clearfix">
-                    <div class="row">
-                        <div class="col-3">
-                            <h3 class="title">KNOW <br> {{ $institute->name }}</h3>
-                        </div>
-                        <div class="col-9"> --}}
-                            {{-- <p>{!! $institute->about !!}</p> --}}
-                        {{-- <p>Africa Research Institute For AI (ARIFA), is a not-for-profit think tank united by a shared
-                        commitment to advancing impactful research, training and advisory.
-                        ARIFA is specifically focused on Sub-Saharan Africa (SSA) and seeks to foster innovation,
-                        facilitate knowledge exchange, and drive evidence-based policymaking to effectively tackle
-                        the dynamic challenges posed by the rapid advancements in technology.</p><br/><br/>
-
-                        <p>Rooted in its commitment to interdisciplinary research and collaboration, ARIFA has emerged
-                        as a pivotal force within the research and development (R&D) sector. As a key player in the
-                        renaissance of AI, ARIFA actively contributes to shaping the future integration of AI and other
-                        emerging technologies into the fabric of modern society.</p><br/><br/>
-
-                        <p>Since its inception, ARIFA has been dedicated to fostering a renaissance in AI, leveraging
-                        computational power and abundant data to push the boundaries of real-world applications.
-                        As ARIFA continues its journey, its historic background stands as a testament to its founding
-                        principles, serving as a foundation for growth, impact, and a relentless pursuit of excellence
-                        in the ever-evolving fields of AI and other Emerging Technologies.</p>
-                        </div>
-                    </div> --}}
-					{{-- <a href="{{ route('contact-us') }}" class="theme-button-one">CONTACT US</a> --}}
-				{{-- </div>
-			</div> <!-- /.callout-banner --> --}}
-
-
-
 			<!--
 			=============================================
 				About Company Stye Two
@@ -62,10 +24,11 @@
 				<div class="overlay">
 					<div class="container">
 						<div class="row">
-                            <div class="col-3">
+                            <div class="col-sm-12 col-md-5 col-lg-12">
                                 <h3 class="title">KNOW {{ $institute->name }}</h3>
+                                <hr>
                             </div>
-                            <div class="col-9">
+                            <div class="col-sm-12 col-md-7 col-lg-12">
                                 {{-- <p>{!! $institute->about !!}</p> --}}
                             <p>Africa Research Institute For AI (ARIFA), is a not-for-profit think tank united by a shared
                             commitment to advancing impactful research, training and advisory.
@@ -95,10 +58,11 @@
 				<div class="overlay">
 					<div class="container">
 						<div class="row">
-                            <div class="col-3">
+                            <div class="col-sm-12 col-md-5 col-lg-12">
                                 <h3 class="title">Diversity, Equity, and Belonging</h3>
+                                <hr>
                             </div>
-                            <div class="col-9">
+                            <div class="col-sm-12 col-md-7 col-lg-12">
                                 {{-- <p>{!! $institute->about !!}</p> --}}
                             <p>ARIFA is committed to fostering an inclusive work environment for everyone.
                                 We embrace and celebrate the unique experiences, perspectives and cultural
@@ -119,10 +83,11 @@
 				<div class="overlay">
 					<div class="container">
 						<div class="row">
-                            <div class="col-3">
+                            <div class="col-sm-12 col-md-5 col-lg-12">
                                 <h3 class="title">Ventures/Research Partners</h3>
+                                <hr>
                             </div>
-                            <div class="col-9">
+                            <div class="col-sm-12 col-md-7 col-lg-12">
                             <p>
                                 ARIFA now’s work is done through collaborations across an expansive, world-class network
                                 that includes scholars, technologists, policy-makers, advocates, and many others.

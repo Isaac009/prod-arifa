@@ -46,7 +46,7 @@ Route::get('/blog/{blog}/details', [BlogController::class, 'details'])->name('bl
 
 
 Route::get('/publications', [PublicationController::class, 'index'])->name('publications.index');
-Route::get('/publications/details', [PublicationController::class, 'show'])->name('publications.show');
+Route::get('/publications/{publication}/details', [PublicationController::class, 'show'])->name('publications.show');
 
 Route::get('/opportunities', [OpportunityController::class, 'index'])->name('opportunities.index');
 Route::get('/opportunities/details', [OpportunityController::class, 'show'])->name('opportunities.show');

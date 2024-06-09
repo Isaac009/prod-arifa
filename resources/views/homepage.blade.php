@@ -1,41 +1,62 @@
 @extends('frontend.layout.app')
 <style>
     .slider {
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-        }
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
 
-        .slides {
-            display: flex;
-            animation: slide 30s infinite;
-        }
+.slides {
+    display: flex;
+    animation: slide 40s infinite;
+}
 
-        .slide {
-            width: 100%;
-            height: 500px;
-            flex-shrink: 0;
-            background-size: cover;
-            background-position: center;
-        }
+.slide {
+    width: 100%;
+    height: 500px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Required for positioning slide-text */
+}
 
-        .slide1 { background-image: url('images/slide1.jpg'); }
-        .slide2 { background-image: url('images/slide2.jpg'); }
-        .slide3 { background-image: url('images/slide3.jpg'); }
-        .slide3 { background-image: url('images/slide4.jpg'); }
-        .slide4 { background-image: url('images/slide5.jpg'); }
+/* Styling for the text container */
+.slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    z-index: 1;
+}
 
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            20% { transform: translateX(0); }
-            25% { transform: translateX(-100%); }
-            45% { transform: translateX(-100%); }
-            50% { transform: translateX(-200%); }
-            70% { transform: translateX(-200%); }
-            75% { transform: translateX(-300%); }
-            95% { transform: translateX(-300%); }
-            100% { transform: translateX(-400%); }
-        }
+.slide1 { background-image: url('images/slide1.jpg'); }
+.slide2 { background-image: url('images/slide2.jpg'); }
+.slide3 { background-image: url('images/slide3.jpg'); }
+.slide4 { background-image: url('images/slide4.jpg'); }
+.slide5 { background-image: url('images/slide5.jpg'); }
+.slide1-copy { background-image: url('images/slide1.jpg'); }
+
+/* Keyframes for the slide animation */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    14.28% { transform: translateX(0%); } /* Hold the first slide */
+    19.04% { transform: translateX(-100%); }
+    33.32% { transform: translateX(-100%); } /* Hold the second slide */
+    38.08% { transform: translateX(-200%); }
+    52.36% { transform: translateX(-200%); } /* Hold the third slide */
+    57.12% { transform: translateX(-300%); }
+    71.40% { transform: translateX(-300%); } /* Hold the fourth slide */
+    76.16% { transform: translateX(-400%); }
+    90.44% { transform: translateX(-400%); } /* Hold the fifth slide */
+    95.20% { transform: translateX(-500%); }
+    100% { transform: translateX(-500%); } /* Smooth transition to the first slide copy */
+}
+
 </style>
 
 @section('main-content')
@@ -49,10 +70,26 @@
 			<div id="" class="banner-one">
                 <div class="slider">
                         <div class="slides">
-                            <div class="slide slide1"></div>
-                            <div class="slide slide2"></div>
-                            <div class="slide slide3"></div>
-                            <div class="slide slide4"></div>
+                            <div class="slide slide1">
+                                <div class="slide-text">AI Awareness Workshop NM-AIST Arusha
+                                </div>
+                            </div>
+                            <div class="slide slide2">
+                                <div class="slide-text">AI Awareness Workshop NM-AIST Arusha</div>
+                            </div>
+                            <div class="slide slide3">
+                                <div class="slide-text">Conference on the State of AI in Africa-Strathmore University Nairobi</div>
+                            </div>
+                            <div class="slide slide4">
+                                <div class="slide-text">AI Workshop Dar es Salaam</div>
+                            </div>
+                            <div class="slide slide5">
+                                <div class="slide-text">ARIFA Participated in Financial Inclusion Workshop Organized by STIPRO</div>
+                            </div>
+                            <div class="slide slide1-copy">
+                                <div class="slide-text">AI Awareness Workshop NM-AIST Arusha
+                                </div>
+                            </div>
                         </div>
                 </div>
 				{{-- <div data-src="{{ asset('front-resources/images/home/slide-1.jpg') }}">
@@ -298,7 +335,7 @@
                             <div class="col-lg-3 col-sm-6 col-12">
 								<div class="team-member">
 									<div class="image-box">
-										<img src="{{ asset('storage/'.$member->profile_photo_url) }}" width="130px" height="240px" alt="">
+										<img src="{{ asset('storage/'.$member->profile_photo_url) }}" class="image_size" alt="">
 										<div class="overlay">
 											<div class="hover-content">
 												<ul>
