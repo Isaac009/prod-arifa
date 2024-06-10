@@ -1,5 +1,30 @@
 @extends('frontend.layout.app')
+<style>
+    /* Basic styling for the tabbed interface */
+    .tab {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: 10px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
 
+    .tab.active {
+        background-color: #861f1f;
+        font-weight: bold;
+        color: #f1f1f1;
+    }
+
+    .tab-content {
+        display: none;
+        padding: 20px;
+        border-top: 1px solid #ccc;
+    }
+
+    .tab-content.active {
+        display: block;background-color: #ece3e3;
+    }
+</style>
 @section('main-content')
 
     <!--
@@ -30,49 +55,62 @@
                 </div>
                 <hr>
                 <br>
+                <div id="tabs">
+                    <div class="tab active" data-tab="tab1">Board of Directors</div>
+                    <div class="tab" data-tab="tab2">Leadership</div>
+                    <div class="tab" data-tab="tab3">Staff</div>
+                    <div class="tab" data-tab="tab4">Researchers</div>
+                </div>
                 @forelse($groups as $group)
-                    <h2>{{ $group->name }}</h2>
-                    <hr>
-                <div class="row">
-                    @forelse ($group->members as $member)
-                    <div class="col-lg-3 col-sm-6 col-12">
-                        <div class="team-member">
-                            <div class="image-box">
-                                <img src="{{ asset('storage/'.$member->profile_photo_url) }}" width="250" height="250" alt="">
-										<div class="overlay">
-											<div class="hover-content">
-												<ul>
-													<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-												</ul>
-												<p>{!! Str::substr($member->bio, 0, 60) !!}...</p>
-                                                <button type="button" class="btn btn-primary"
-                                                data-toggle="modal" data-target="#memberModal"
-                                                data-member-id="{{ $member->id }}">
-                                                    View Member Details
-                                                </button>
-											</div> <!-- /.hover-content -->
-										</div> <!-- /.overlay -->
-									</div> <!-- /.image-box -->
-									<div class="text">
-										<h6>@foreach($member->titles as $title)
-                                            {{ $title }}
-                                        @endforeach
-                                        {{ $member->name }}</h6>
-                                {{-- <span>Sales Consultant</span> --}}
-                            </div> <!-- /.text -->
-                        </div> <!-- /.team-member -->
-                    </div> <!-- /.col- -->
-                    @empty
-                        <p>No Team Yet.</p>
-                    @endforelse
+                    {{-- <h2>{{ $group->name }}</h2> --}}
+                    {{-- <p>{{ $group->quote }}</p> --}}
+                    {{-- <hr> --}}
+                    <div id="tab-contents">
+                        <div class="tab-content {{ $loop->index+1 == 1? 'active':'' }}" id="tab{{ $loop->index+1 }}">
+                            <h4>{{ $group->name }}</h4>
+                            <p>{{ $group->quote }}</p>
+                            <div class="row">
+                                @forelse ($group->members as $member)
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="team-member">
+                                        <div class="image-box">
+                                            <img src="{{ asset('storage/'.$member->profile_photo_url) }}" width="250" height="250" alt="">
+                                                    <div class="overlay">
+                                                        <div class="hover-content">
+                                                            <ul>
+                                                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                                            </ul>
+                                                            <p>{!! Str::substr($member->bio, 0, 60) !!}...</p>
+                                                            <button type="button" class="btn btn-primary"
+                                                            data-toggle="modal" data-target="#memberModal"
+                                                            data-member-id="{{ $member->id }}">
+                                                                View Member Details
+                                                            </button>
+                                                        </div> <!-- /.hover-content -->
+                                                    </div> <!-- /.overlay -->
+                                                </div> <!-- /.image-box -->
+                                                <div class="text">
+                                                    <h6>@foreach($member->titles as $title)
+                                                        {{ $title }}
+                                                    @endforeach
+                                                    {{ $member->name }}</h6>
+                                            {{-- <span>Sales Consultant</span> --}}
+                                        </div> <!-- /.text -->
+                                    </div> <!-- /.team-member -->
+                                </div> <!-- /.col- -->
+                                @empty
+                                    <p>No Team Yet.</p>
+                                @endforelse
 
-                </div> <!-- /.row -->
-                <br><br>
-                @empty
-                    <p>No Team Groups Yet.</p>
-                @endforelse
+                            </div> <!-- /.row -->
+                            <br><br>
+                        </div>
+                    </div>
+                    @empty
+                        <p>No Team Groups Yet.</p>
+                    @endforelse
             </div> <!-- /.wrapper -->
         </div> <!-- /.container -->
     </div> <!-- /.our-team -->
@@ -181,5 +219,25 @@
     });
 });
 
+</script>
+
+<script>
+    // JavaScript to handle tab switching
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Remove active class from all tabs and tab contents
+                tabs.forEach(tab => tab.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to the clicked tab and corresponding tab content
+                tab.classList.add('active');
+                document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
+            });
+        });
+    });
 </script>
 @endpush
