@@ -11,6 +11,7 @@ use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
+use App\Models\MemberGroup;
 use Filament\Resources\Resource;
 use Illuminate\Support\Collection;
 use Filament\Forms\Components\Select;
@@ -41,10 +42,17 @@ class MemberResource extends Resource
                 Section::make('User Info')
                 ->description('Provide the user basic information here.')
                 ->schema([
-                    Select::make('member_group_id')
-                    ->label('Member Group Name')
-                    ->relationship(name: 'member_group', titleAttribute: 'name')
+                    Select::make('groups')
+                    ->multiple()
+                    ->relationship('groups', 'name')
+                    // ->options(MemberGroup::all()->pluck('name', 'id')->toArray())
+                    ->preload()
                     ->required(),
+
+                    // Select::make('member_group_id')
+                    // ->label('Member Group Name')
+                    // ->relationship(name: 'member_group', titleAttribute: 'name')
+                    // ->required(),
                     Select::make('titles')
                     ->required()
                     ->multiple()
@@ -135,7 +143,7 @@ class MemberResource extends Resource
                 ImageColumn::make('profile_photo_url'),
                 TextColumn::make('titles'),
                 TextColumn::make('name')->sortable()->searchable(),
-                TextColumn::make('member_group.name')->sortable()->searchable(),
+                TextColumn::make('groups.name')->sortable()->searchable(),
                 TextColumn::make('email')->sortable()->searchable(),
                 TextColumn::make('address')->sortable()->searchable(),
                 TextColumn::make('date_of_birth')->sortable()->searchable()->date(),
@@ -158,7 +166,7 @@ class MemberResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            // 'groups' => MemberGroup::relation(),
         ];
     }
 
