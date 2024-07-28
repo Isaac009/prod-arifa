@@ -35,6 +35,11 @@ class Member extends Model
         return $this->belongsTo(Title::class);
     }
 
+    public function groups()
+    {
+        return $this->belongsToMany(MemberGroup::class, 'member_member_group');
+    }
+
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);

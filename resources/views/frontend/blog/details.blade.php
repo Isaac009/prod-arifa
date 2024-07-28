@@ -9,7 +9,7 @@
 			<div class="theme-inner-banner section-spacing">
 				<div class="overlay">
 					<div class="container">
-						<h2>Publication Details</h2>
+						<h2>Event Details</h2>
 					</div> <!-- /.container -->
 				</div> <!-- /.overlay -->
 			</div> <!-- /.theme-inner-banner -->
@@ -25,9 +25,9 @@
 					<div class="row">
 						<div class="col-xl-9 col-lg-8 col-12">
 							<div class="service-content">
-								<img src="{{ asset('storage/'.$publication->image) }}" alt="" class="cover-img">
-								<h3 class="main-title">{{ $publication->title }}</h3>
-								<p>{!! $publication->content !!}</p>
+								<img src="{{ asset('storage/'.$blog->image) }}" alt="" class="cover-img">
+								<h3 class="main-title">{{ $blog->title }}</h3>
+								<p>{!! $blog->content !!}</p>
 
 								{{-- <div class="presentation-section">
 									<h4 class="sub-heading">Company Presentation:</h4>
@@ -166,9 +166,9 @@
 								<h5 class="title">Resources</h5>
                                 <hr>
 
-								@if ($publication->attachments)
+								@if ($blog->attachments)
                                 <ul>
-                                    @foreach ($publication->attachments as $item)
+                                    @foreach ($blog->attachments as $item)
                                         <li><a href="{{ asset('storage/'.$item) }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download file. pdf</a></li>
                                     @endforeach
 								</ul>
@@ -176,17 +176,15 @@
                                     <span>No resources attached.</span>
                                 @endif
 							</div> <!-- /.sidebar-brochures -->
-                            <br>
-                            <div class="sidebar-container sidebar-categories">
-                                <h5 class="title">Categories</h5>
-                                <ul>
-                                    <li><a href="#">Research Reports</a></li>
-                                    <li><a href="#">Policy Briefs</a></li>
-                                    <li><a href="#">Concept Notes</a></li>
-                                    <li><a href="#">Books</a></li>
-                                    <li><a href="#">ARIFA Journal</a></li>
-                                </ul>
-                            </div> <!-- /.sidebar-categories -->
+							{{-- <div class="sidebar-box sidebar-contact">
+								<h5 class="title">Contact Form</h5>
+								<form action="#">
+									<input type="text" placeholder="Name">
+									<input type="email" placeholder="Email">
+									<textarea placeholder="Message"></textarea>
+									<button class="theme-button-one">SUBMIT</button>
+								</form>
+							</div> <!-- /.sidebar-contact --> --}}
 						</div> <!-- /.theme-sidebar-one -->
 					</div> <!-- /.row -->
 				</div> <!-- /.container -->

@@ -1369,8 +1369,8 @@ body .theme-button-one:hover {
 .our-team .team-member .overlay .hover-content {
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
 }
 
 .our-team .team-member .overlay .hover-content ul li {
@@ -1381,9 +1381,9 @@ body .theme-button-one:hover {
 .our-team .team-member .overlay .hover-content ul li a {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 60%;
     border: 1px solid #fff;
-    line-height: 38px;
+    line-height: 8px;
     color: #fff;
     font-size: 14px;
 }
@@ -3565,4 +3565,52 @@ body .theme-button-one:hover {
     width: 380px;
     padding: 0 20px;
     border: 1px solid #f0f0f0;
+}
+
+
+/* Additional Styles For Image size
+ */
+
+
+/* For small devices (mobiles) */
+
+@media only screen and (max-width: 600px) {
+    .image_size {
+        width: 130px;
+        height: 360px;
+    }
+    /* Additional styles for small devices */
+}
+
+
+/* For tablets (portrait mode) */
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .image_size {
+        width: 130px;
+        height: 260px;
+    }
+    /* Additional styles for tablets in portrait mode */
+}
+
+
+/* For tablets (landscape mode) */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .image_size {
+        width: 130px;
+        height: 380px;
+    }
+    /* Additional styles for tablets in landscape mode */
+}
+
+
+/* For devices larger than tablets (desktops) */
+
+@media only screen and (min-width: 1024px) {
+    .image_size {
+        width: 130px;
+        height: 280px;
+    }
+    /* Additional styles for larger devices */
 }

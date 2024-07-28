@@ -25,9 +25,9 @@
                 <div class="col-xl-9 col-lg-8 col-12">
                     <div class="service-content">
                         <img src="{{ asset('images/project_placeholder.png') }}" alt="" class="cover-img">
-                        <h3 class="main-title">{{ $project->title }}</h3>
+                        <h6>{{ $project->title }}</h6>
                         <p>{!! $project->description !!}</p>
-                        <div class="presentation-section">
+                        {{-- <div class="presentation-section">
                             <h4 class="sub-heading">Company Presentation:</h4>
                             <p>That this group would somehow form a family that's the way we all became the Brady Bunch apartment in the sky moving on up to the east side a family to explore strange new worlds.</p>
                             <div class="row">
@@ -144,7 +144,7 @@
                                     </div>
                                 </div>
                             </div> <!-- /.wrapper -->
-                        </div> <!-- /.market-growth -->
+                        </div> <!-- /.market-growth --> --}}
                     </div> <!-- /.service-content -->
                 </div> <!-- /.col- -->
 

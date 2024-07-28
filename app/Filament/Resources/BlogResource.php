@@ -3,10 +3,10 @@
 namespace App\Filament\Resources;
 
 use Filament\Forms;
+use App\Models\Blog;
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
-use App\Models\Publication;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
@@ -17,55 +17,36 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
-use Filament\Forms\Components\DatePicker;
 use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\BlogResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\PublicationResource\Pages;
-use App\Filament\Resources\PublicationResource\RelationManagers;
-use App\Filament\Resources\PublicationResource\Pages\EditPublication;
-use App\Filament\Resources\PublicationResource\Pages\ListPublications;
-use App\Filament\Resources\PublicationResource\Pages\CreatePublication;
+use App\Filament\Resources\BlogResource\Pages\EditBlog;
+use App\Filament\Resources\BlogResource\Pages\ListBlogs;
+use App\Filament\Resources\BlogResource\Pages\CreateBlog;
+use App\Filament\Resources\BlogResource\RelationManagers;
 
-class PublicationResource extends Resource
+class BlogResource extends Resource
 {
-    protected static ?string $model = Publication::class;
+    protected static ?string $model = Blog::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-book-open';
-
-    protected static ?string $navigationGroup = 'Publication Management';
-
-    protected static ?int $navigationSort = 3;
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Section::make('Publication Details')
-                ->description('Provide the publication details here.')
+                Section::make('Blog Details')
+                ->description('Provide the blog details here.')
                 ->schema([
-                    Select::make('publication_type_id')
-                    ->label('Publication Category/Type')
-                    ->relationship(name: 'PublicationType', titleAttribute: 'name')
-                    ->required()
-                    ->searchable()
-                    ->preload(),
-                    Select::make('publication_tag_id')
-                    ->relationship(name: 'publicationTag', titleAttribute: 'name')
-                    ->required()
-                    ->searchable()
-                    ->preload(),
                     TextInput::make('title')
-                        ->label('Publication Title')
+                        ->label('Blog Title')
                         ->required()
                         ->autofocus()
                         ->maxLength(255),
-                    Datepicker::make('published_on')
-                        ->label('Publication Date')
-                        ->required(),
                     FileUpload::make('image')
-                        ->label('Publication Photo')
-                        ->uploadingMessage('Uploading publication photo...')
+                        ->label('Blog Photo')
+                        ->uploadingMessage('Uploading blog picture...')
                         ->imageEditor()
                         ->preserveFilenames()
                         ->directory('images')
@@ -75,8 +56,7 @@ class PublicationResource extends Resource
                 Section::make()
                     ->schema([
                     RichEditor::make('content')
-                        ->label('Publication Content')
-                        ->required()
+                        ->label('Blog Content')
                         ->toolbarButtons([
                             'blockquote',
                             'bold',
@@ -91,7 +71,7 @@ class PublicationResource extends Resource
                         ]),
                     FileUpload::make('attachments')
                         ->label('Attachments')
-                        ->uploadingMessage('Uploading publications resources (Multiple attachments allowed)')
+                        ->uploadingMessage('Uploading blogs resources...')
                         ->directory('attachments')
                         ->multiple()
                         ->storeFileNamesIn('attachments')
@@ -106,9 +86,7 @@ class PublicationResource extends Resource
             ->columns([
                 ImageColumn::make('image'),
                 TextColumn::make('title'),
-                TextColumn::make('publicationType.name')->sortable()->searchable(),
-                TextColumn::make('publicationTag.name')->sortable()->searchable(),
-                TextColumn::make('published_on')->sortable()->searchable()->date(),
+                TextColumn::make('created_at')->sortable()->searchable()->date(),
             ])
             ->filters([
                 //
@@ -133,9 +111,9 @@ class PublicationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPublications::route('/'),
-            'create' => Pages\CreatePublication::route('/create'),
-            'edit' => Pages\EditPublication::route('/{record}/edit'),
+            'index' => Pages\ListBlogs::route('/'),
+            'create' => Pages\CreateBlog::route('/create'),
+            'edit' => Pages\EditBlog::route('/{record}/edit'),
         ];
     }
 }

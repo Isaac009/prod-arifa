@@ -44,6 +44,7 @@
 									<li><a href="{{ route('opportunities.call-for-papers') }}">Call for Paper</a></li>
 									<li><a href="{{ route('publications.index') }}">Publications</a></li>
 									<li><a href="{{ route('opportunities.index') }}">Opportunities</a></li>
+                                    <li><a href="{{ route('blogs.index') }}">Blogs</a></li>
 								</ul>
 							</div> <!-- /.footer-list -->
 							<div class="col-xl-3 col-lg-2 col-sm-6 footer-newsletter">
@@ -60,7 +61,7 @@
 				<div class="bottom-footer" style="background-color: rgb(8, 0, 0)">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-6 col-12"><p>&copy; Copyrights 2018. All Rights Reserved.</p></div>
+							<div class="col-md-6 col-12"><p>&copy; Copyrights 2018 ~ <script>document.write(new Date().getFullYear());</script>. All Rights Reserved.</p></div>
 							<div class="col-md-6 col-12">
 								<ul>
 									<li><a href="{{ route('about') }}">About</a></li>
