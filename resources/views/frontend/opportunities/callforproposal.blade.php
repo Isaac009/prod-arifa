@@ -17,151 +17,43 @@
 
 			<!--
 			=============================================
-				Our Case
+				Service Details
 			==============================================
 			-->
-			<div class="our-case our-project section-spacing">
+			<div class="service-details section-spacing">
 				<div class="container">
-					<div class="wrapper">
-						<div class="row">
-                            <span>No Calls yet.</span>
-							{{-- @foreach ($projects as $project)
-                            <div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('storage/'.$project->project_image) }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="{{ route('projects.show',$project->id) }}">{{ $project->title }}</a></h5>
-											</div>
-											<a href="{{ route('projects.show',$project->id) }}" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-                            @endforeach --}}
-							{{-- <div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/2.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/3.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/4.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/5.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/6.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/13.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/14.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- -->
-							<div class="col-lg-4 col-sm-6 col-12">
-								<div class="single-case-block">
-									<img src="{{ asset('front-resources/images/portfolio/15.jpg') }}" alt="">
-									<div class="hover-content">
-										<div class="text clearfix">
-											<div class="float-left">
-												<h5><a href="project-details.html">Business Meeting</a></h5>
-												<p>Explore strange new worlds</p>
-											</div>
-											<a href="project-details.html" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-										</div> <!-- /.text -->
-									</div> <!-- /.hover-content -->
-								</div> <!-- /.single-case-block -->
-							</div> <!-- /.col- --> --}}
-						</div> <!-- /.row -->
-					</div> <!-- /.wrapper -->
-					<div class="theme-pagination text-center">
-						<ul>
-							<li><a href="#">1</a></li>
-							<li class="active"><a href="#">2</a></li>
-							<li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-						</ul>
-					</div>
-				</div> <!-- /.container -->
-			</div> <!-- /.our-case -->
+					<div class="row">
+						<div class="col-xl-9 col-lg-8 col-12">
+							<div class="service-content">
+								<img src="{{ asset('storage/images/call-for-proposal-financial.png') }}" alt="" class="cover-img">
+								<h3 class="main-title">Call for Collaborative Research Proposal</h3>
+								<p>Application of Artificial Intelligence (AI) and Machine Learning (ML) in Agriculture, Health and Finance in East Africa Community (EAC).</p>
+							</div> <!-- /.service-content -->
+						</div> <!-- /.col- -->
 
+						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 col-12 theme-sidebar-one">
+							<div class="sidebar-box sidebar-brochures">
+								<h5 class="title">Resources</h5>
+                                <hr>
+
+								<li><a href="{{ asset('storage/attachments/Call_for_Proposal_ARIFA.pdf') }}" target="_blank">
+                                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                    Download file. pdf</a>
+                                </li>
+							</div> <!-- /.sidebar-brochures -->
+                            <br>
+                            {{-- <div class="sidebar-container sidebar-categories">
+                                <h5 class="title">Categories</h5>
+                                <ul>
+                                    <li><a href="#">Research Reports</a></li>
+                                    <li><a href="#">Policy Briefs</a></li>
+                                    <li><a href="#">Concept Notes</a></li>
+                                    <li><a href="#">Books</a></li>
+                                    <li><a href="#">ARIFA Journal</a></li>
+                                </ul>
+                            </div> <!-- /.sidebar-categories --> --}}
+						</div> <!-- /.theme-sidebar-one -->
+					</div> <!-- /.row -->
+				</div> <!-- /.container -->
+			</div> <!-- /.service-details -->
 @endsection

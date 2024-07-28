@@ -75,7 +75,7 @@
 										<li class="{{ request()->routeIs(['opportunities.*'])?'active':'' }}"><a href="#">Opportunities</a>
 									    	<ul class="dropdown">
 									        	<li><a href="{{ route('opportunities.careers') }}">Careers</a></li>
-									        	<li><a href="{{ route('opportunities.call-for-papers') }}">Call for Proposals</a></li>
+									        	<li><a href="{{ route('opportunities.call-for-proposal') }}">Call for Proposals</a></li>
 												<li><a href="{{ route('opportunities.become-instructor') }}">Become an Instructor</a></li>
 									        </ul>
 									    </li>
