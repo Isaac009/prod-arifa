@@ -149,7 +149,7 @@
                 </div> <!-- /.col- -->
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 col-12 theme-sidebar-one">
-                    <div class="sidebar-box service-categories">
+                    {{-- <div class="sidebar-box service-categories">
                         <h5 class="title">Our Solutions</h5>
                         <ul>
                             <li><a href="#">Travel and Aviation</a></li>
@@ -159,12 +159,15 @@
                             <li><a href="#">Software Research</a></li>
                             <li><a href="#">Quality Resourcing</a></li>
                         </ul>
-                    </div> <!-- /.service-categories -->
+                    </div> <!-- /.service-categories --> --}}
                     <div class="sidebar-box sidebar-brochures">
                         <h5 class="title">Brochures</h5>
                         <ul>
+                            @if($project->attachements)
                             <li><a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download file. pdf</a></li>
-                            <li><a href="#"><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i> Download file. ppt</a></li>
+                            @else
+                            <li style="color: azure">No resources</li>
+                            @endif
                         </ul>
                     </div> <!-- /.sidebar-brochures -->
                     <div class="sidebar-box sidebar-contact">

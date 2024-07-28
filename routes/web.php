@@ -46,7 +46,8 @@ Route::get('/publications/details', [PublicationController::class, 'show'])->nam
 
 Route::get('/opportunities', [OpportunityController::class, 'index'])->name('opportunities.index');
 Route::get('/opportunities/details', [OpportunityController::class, 'show'])->name('opportunities.show');
-Route::get('/opportunities/Call-for-proposal', [OpportunityController::class, 'callforpaper'])->name('opportunities.call-for-papers');
+Route::get('/opportunities/Call-for-paper', [OpportunityController::class, 'callforpaper'])->name('opportunities.call-for-papers');
+Route::get('/opportunities/Call-for-proposal', [OpportunityController::class, 'callforproposal'])->name('opportunities.call-for-proposal');
 Route::get('/opportunities/become-instructor', [OpportunityController::class, 'becomeinstructor'])->name('opportunities.become-instructor');
 Route::get('/opportunities/careers', [OpportunityController::class, 'careers'])->name('opportunities.careers');
 

@@ -10,6 +10,10 @@ class OpportunityController extends Controller
         return view('frontend.opportunities.callforpapers');
     }
 
+    public function callforproposal(){
+        return view('frontend.opportunities.callforprrroposal');
+    }
+
     public function becomeinstructor(){
         return view('frontend.opportunities.becominstructor');
     }

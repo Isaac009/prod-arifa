@@ -149,7 +149,8 @@
 							<div class="text">
 								<div class="theme-title-one">
 									<h2>About Our {{ $institute->name }}</h2>
-									<p>Africa Research Institute For AI (ARIFA), is a not-for-profit think tank united by a shared commitment to advancing impactful research, training and advisory. ARIFA is specifically focused on Sub-Saharan Africa (SSA) and seeks to foster innovation, facilitate knowledge exchange, and drive evidence-based policymaking to effectively tackle the dynamic challenges posed by the rapid advancements in technology.
+									<p style="text-align: justify">
+										Africa Research Institute For AI (ARIFA), is a not-for-profit think tank united by a shared commitment to advancing impactful research, training and advisory. ARIFA is specifically focused on Sub-Saharan Africa (SSA) and seeks to foster innovation, facilitate knowledge exchange, and drive evidence-based policymaking to effectively tackle the dynamic challenges posed by the rapid advancements in technology.
                                         Rooted in its commitment to interdisciplinary research and collaboration, ARIFA has emerged as a pivotal force within the research and development (R&D) sector. As a key player in the renaissance of AI, ARIFA actively contributes to shaping the future integration of AI and other emerging technologies into the fabric of modern society.
                                         Since its inception, ARIFA has been dedicated to fostering a renaissance in AI, leveraging computational power and abundant data to push the boundaries of real-world applications. As ARIFA continues its journey, its historic background stands as a testament to its founding principles, serving as a foundation for growth, impact, and a relentless pursuit of excellence in the ever-evolving fields of AI and other Emerging Technologies.
                                     </p>

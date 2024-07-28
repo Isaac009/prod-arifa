@@ -9,7 +9,7 @@
 			<div class="theme-inner-banner section-spacing">
 				<div class="overlay">
 					<div class="container">
-						<h2>Projects</h2>
+						<h2>Call for Proposal</h2>
 					</div> <!-- /.container -->
 				</div> <!-- /.overlay -->
 			</div> <!-- /.theme-inner-banner -->
@@ -24,25 +24,22 @@
 				<div class="container">
 					<div class="wrapper">
 						<div class="row">
-							@foreach ($projects as $project)
+                            <span>No Calls yet.</span>
+							{{-- @foreach ($projects as $project)
                             <div class="col-lg-4 col-sm-6 col-12">
 								<div class="single-case-block">
 									<img src="{{ asset('storage/'.$project->project_image) }}" alt="">
-                                    @if ($project->project_image !== null)
-                                        <img src="{{ asset('storage/'.$project->project_image) }}" alt="">
-                                    @endif
 									<div class="hover-content">
 										<div class="text clearfix">
 											<div class="float-left">
-												<h5><a href="{{ route('research.projects.show',$project->id) }}">{{ $project->title }}</a></h5>
-												{{-- <p>Explore strange new worlds</p> --}}
+												<h5><a href="{{ route('projects.show',$project->id) }}">{{ $project->title }}</a></h5>
 											</div>
-											<a href="{{ route('research.projects.show',$project->id) }}" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+											<a href="{{ route('projects.show',$project->id) }}" class="details float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 										</div> <!-- /.text -->
 									</div> <!-- /.hover-content -->
 								</div> <!-- /.single-case-block -->
 							</div> <!-- /.col- -->
-                            @endforeach
+                            @endforeach --}}
 							{{-- <div class="col-lg-4 col-sm-6 col-12">
 								<div class="single-case-block">
 									<img src="{{ asset('front-resources/images/portfolio/2.jpg') }}" alt="">
@@ -157,13 +154,13 @@
 							</div> <!-- /.col- --> --}}
 						</div> <!-- /.row -->
 					</div> <!-- /.wrapper -->
-					{{-- <div class="theme-pagination text-center">
+					<div class="theme-pagination text-center">
 						<ul>
 							<li><a href="#">1</a></li>
 							<li class="active"><a href="#">2</a></li>
 							<li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
 						</ul>
-					</div> --}}
+					</div>
 				</div> <!-- /.container -->
 			</div> <!-- /.our-case -->
 
